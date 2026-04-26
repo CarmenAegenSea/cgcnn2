@@ -1,0 +1,41 @@
+# generated using pymatgen
+data_Ho2MgW2(ClO4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.54899376
+_cell_length_b   6.54899376
+_cell_length_c   6.95726209
+_cell_angle_alpha   72.17086702
+_cell_angle_beta   72.17086702
+_cell_angle_gamma   65.06300787
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ho2MgW2(ClO4)2
+_chemical_formula_sum   'Ho2 Mg1 W2 Cl2 O8'
+_cell_volume   252.10069896
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ho  Ho0  1  0.75344575  0.76261598  0.10648272  1
+  Ho  Ho1  1  0.23738402  0.24655425  0.89351728  1
+  Mg  Mg2  1  0.69344568  0.30655432  0.50000000  1
+  W  W3  1  0.64367039  0.63650065  0.73440273  1
+  W  W4  1  0.36349935  0.35632961  0.26559727  1
+  Cl  Cl5  1  0.95388544  0.04894037  0.75221788  1
+  Cl  Cl6  1  0.95105963  0.04611456  0.24778212  1
+  O  O7  1  0.75499532  0.60846258  0.45498619  1
+  O  O8  1  0.39153742  0.24500468  0.54501381  1
+  O  O9  1  0.54731691  0.53141951  0.21759929  1
+  O  O10  1  0.46858049  0.45268309  0.78240071  1
+  O  O11  1  0.11750321  0.51410155  0.12803629  1
+  O  O12  1  0.45484401  0.08789907  0.16440944  1
+  O  O13  1  0.91210093  0.54515599  0.83559056  1
+  O  O14  1  0.48589845  0.88249679  0.87196371  1

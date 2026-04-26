@@ -1,0 +1,41 @@
+# generated using pymatgen
+data_MgCu2(SO5)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.65816544
+_cell_length_b   5.54950536
+_cell_length_c   8.63571225
+_cell_angle_alpha   118.61242902
+_cell_angle_beta   120.83626519
+_cell_angle_gamma   89.79682683
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgCu2(SO5)2
+_chemical_formula_sum   'Mg1 Cu2 S2 O10'
+_cell_volume   193.58259339
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.17105800  0.52451100  0.71374500  1
+  Cu  Cu1  1  0.01353600  0.01235100  0.01647500  1
+  Cu  Cu2  1  0.52523700  0.50382600  0.50307300  1
+  S  S3  1  0.44446700  0.08282300  0.76643700  1
+  S  S4  1  0.55130700  0.90514200  0.24245600  1
+  O  O5  1  0.88176600  0.66513100  0.76329800  1
+  O  O6  1  0.16636500  0.35916600  0.26094500  1
+  O  O7  1  0.35166400  0.17938300  0.90839000  1
+  O  O8  1  0.54722900  0.78931400  0.04704800  1
+  O  O9  1  0.76553700  0.17600900  0.87211300  1
+  O  O10  1  0.24000600  0.86194400  0.17551100  1
+  O  O11  1  0.34412000  0.74604300  0.63688800  1
+  O  O12  1  0.70486100  0.24044300  0.38911600  1
+  O  O13  1  0.31666200  0.18312100  0.61822900  1
+  O  O14  1  0.69047200  0.78269900  0.36752600  1

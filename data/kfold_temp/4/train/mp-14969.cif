@@ -1,0 +1,38 @@
+# generated using pymatgen
+data_BaErCuS3
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   7.07569080
+_cell_length_b   7.07569080
+_cell_length_c   10.13975790
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   147.23120302
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   BaErCuS3
+_chemical_formula_sum   'Ba2 Er2 Cu2 S6'
+_cell_volume   274.76630792
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ba  Ba0  1  0.25595717  0.74404283  0.25000000  1
+  Ba  Ba1  1  0.74404283  0.25595717  0.75000000  1
+  Er  Er2  1  0.00000000  -0.00000000  0.50000000  1
+  Er  Er3  1  0.00000000  -0.00000000  -0.00000000  1
+  Cu  Cu4  1  0.46725520  0.53274480  0.75000000  1
+  Cu  Cu5  1  0.53274480  0.46725520  0.25000000  1
+  S  S6  1  0.06419250  0.93580750  0.75000000  1
+  S  S7  1  0.93580750  0.06419250  0.25000000  1
+  S  S8  1  0.37031050  0.62968950  0.56174588  1
+  S  S9  1  0.37031050  0.62968950  0.93825412  1
+  S  S10  1  0.62968950  0.37031050  0.06174588  1
+  S  S11  1  0.62968950  0.37031050  0.43825412  1

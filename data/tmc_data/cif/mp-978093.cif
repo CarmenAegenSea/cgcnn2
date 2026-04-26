@@ -1,0 +1,36 @@
+# generated using pymatgen
+data_Ho2S3
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.84055477
+_cell_length_b   6.84055640
+_cell_length_c   7.29288031
+_cell_angle_alpha   117.96867554
+_cell_angle_beta   62.03132497
+_cell_angle_gamma   120.00000703
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ho2S3
+_chemical_formula_sum   'Ho4 S6'
+_cell_volume   248.45059637
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ho  Ho0  1  0.64969091  0.35030809  0.05092728  1
+  Ho  Ho1  1  0.85031009  0.14969091  0.44907272  1
+  Ho  Ho2  1  0.14969091  0.85030909  0.55092828  1
+  Ho  Ho3  1  0.35030909  0.64968991  0.94907372  1
+  S  S4  1  0.55185273  0.75000000  0.25000000  1
+  S  S5  1  0.94814627  0.44814727  0.25000000  1
+  S  S6  1  0.24999900  0.05185173  0.25000000  1
+  S  S7  1  0.75000100  0.94814627  0.75000100  1
+  S  S8  1  0.05185373  0.55185373  0.75000100  1
+  S  S9  1  0.44814627  0.25000000  0.75000100  1

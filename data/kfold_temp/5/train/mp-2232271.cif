@@ -1,0 +1,41 @@
+# generated using pymatgen
+data_Tb2MgW2(ClO4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.86286601
+_cell_length_b   6.86286601
+_cell_length_c   7.30018573
+_cell_angle_alpha   77.05642563
+_cell_angle_beta   77.05642563
+_cell_angle_gamma   53.76320963
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Tb2MgW2(ClO4)2
+_chemical_formula_sum   'Tb2 Mg1 W2 Cl2 O8'
+_cell_volume   268.44023591
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Tb  Tb0  1  0.65596482  0.73370384  0.14234318  1
+  Tb  Tb1  1  0.26629616  0.34403518  0.85765682  1
+  Mg  Mg2  1  0.80339595  0.19660405  0.00000000  1
+  W  W3  1  0.61375076  0.66573885  0.71154466  1
+  W  W4  1  0.33426115  0.38624924  0.28845534  1
+  Cl  Cl5  1  0.00687023  0.87651075  0.78674687  1
+  Cl  Cl6  1  0.12348925  -0.00687023  0.21325313  1
+  O  O7  1  0.61325095  0.74721260  0.45487432  1
+  O  O8  1  0.25278740  0.38674905  0.54512568  1
+  O  O9  1  0.57499338  0.44850658  0.21287781  1
+  O  O10  1  0.55149342  0.42500662  0.78712219  1
+  O  O11  1  0.06554637  0.52559964  0.15796832  1
+  O  O12  1  0.53298723  0.12990443  0.11525595  1
+  O  O13  1  0.87009557  0.46701277  0.88474405  1
+  O  O14  1  0.47440036  0.93445363  0.84203168  1

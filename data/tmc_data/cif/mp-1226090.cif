@@ -1,0 +1,37 @@
+# generated using pymatgen
+data_Co5Te6
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.64448762
+_cell_length_b   6.64448762
+_cell_length_c   6.64448858
+_cell_angle_alpha   61.66939993
+_cell_angle_beta   61.66939993
+_cell_angle_gamma   61.66939607
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Co5Te6
+_chemical_formula_sum   'Co5 Te6'
+_cell_volume   215.19290031
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Co  Co0  1  0.83724550  0.83724550  0.83724550  1
+  Co  Co1  1  0.50000000  0.50000000  0.50000000  1
+  Co  Co2  1  0.16275450  0.16275450  0.16275450  1
+  Co  Co3  1  0.66592609  0.66592609  0.66592609  1
+  Co  Co4  1  0.33407391  0.33407391  0.33407391  1
+  Te  Te5  1  0.07873193  0.42312192  0.75559149  1
+  Te  Te6  1  0.75559149  0.07873193  0.42312192  1
+  Te  Te7  1  0.42312192  0.75559149  0.07873193  1
+  Te  Te8  1  0.92126807  0.57687808  0.24440851  1
+  Te  Te9  1  0.57687808  0.24440851  0.92126807  1
+  Te  Te10  1  0.24440851  0.92126807  0.57687808  1

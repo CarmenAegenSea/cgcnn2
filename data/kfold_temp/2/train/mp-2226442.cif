@@ -1,0 +1,39 @@
+# generated using pymatgen
+data_MgTiCo3O8
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.96317617
+_cell_length_b   5.82514268
+_cell_length_c   5.82320921
+_cell_angle_alpha   59.99602324
+_cell_angle_beta   60.77268877
+_cell_angle_gamma   88.38046998
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgTiCo3O8
+_chemical_formula_sum   'Mg1 Ti1 Co3 O8'
+_cell_volume   146.49794767
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.50000000  0.50000000  0.50000000  1
+  Ti  Ti1  1  0.00000000  0.00000000  0.00000000  1
+  Co  Co2  1  0.00000000  0.00000000  0.50000000  1
+  Co  Co3  1  0.00000000  0.50000000  0.00000000  1
+  Co  Co4  1  0.00000000  0.50000000  0.50000000  1
+  O  O5  1  0.21068200  0.25234000  0.00245400  1
+  O  O6  1  0.21094700  0.25216800  0.53444600  1
+  O  O7  1  0.19474200  0.71072900  0.04736800  1
+  O  O8  1  0.20280000  0.70428900  0.54635400  1
+  O  O9  1  0.79720000  0.29571100  0.45364600  1
+  O  O10  1  0.80525800  0.28927100  0.95263200  1
+  O  O11  1  0.78905300  0.74783200  0.46555400  1
+  O  O12  1  0.78931800  0.74766000  0.99754600  1

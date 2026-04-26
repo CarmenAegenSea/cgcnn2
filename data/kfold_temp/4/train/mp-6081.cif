@@ -1,0 +1,52 @@
+# generated using pymatgen
+data_Ba2Ti(SiO4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   8.56085271
+_cell_length_b   8.56085271
+_cell_length_c   5.23975282
+_cell_angle_alpha   90.00000000
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   90.00000000
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ba2Ti(SiO4)2
+_chemical_formula_sum   'Ba4 Ti2 Si4 O16'
+_cell_volume   384.01204802
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ba  Ba0  1  0.17301428  0.67301428  0.99494196  1
+  Ba  Ba1  1  0.67301428  0.82698572  0.99494196  1
+  Ba  Ba2  1  0.32698572  0.17301428  0.99494196  1
+  Ba  Ba3  1  0.82698572  0.32698572  0.99494196  1
+  Ti  Ti4  1  0.50000000  0.50000000  0.53412278  1
+  Ti  Ti5  1  -0.00000000  0.00000000  0.53412278  1
+  Si  Si6  1  0.37200801  0.87200801  0.51053714  1
+  Si  Si7  1  0.87200801  0.62799199  0.51053714  1
+  Si  Si8  1  0.12799199  0.37200801  0.51053714  1
+  Si  Si9  1  0.62799199  0.12799199  0.51053714  1
+  O  O10  1  0.50000000  0.50000000  0.20886314  1
+  O  O11  1  -0.00000000  0.00000000  0.20886314  1
+  O  O12  1  0.79265418  0.07693521  0.64084162  1
+  O  O13  1  0.20734582  0.92306479  0.64084162  1
+  O  O14  1  0.92306479  0.79265418  0.64084162  1
+  O  O15  1  0.07693521  0.20734582  0.64084162  1
+  O  O16  1  0.42306479  0.70734582  0.64084162  1
+  O  O17  1  0.70734582  0.57693521  0.64084162  1
+  O  O18  1  0.29265418  0.42306479  0.64084162  1
+  O  O19  1  0.57693521  0.29265418  0.64084162  1
+  O  O20  1  0.50000000  0.00000000  0.62559986  1
+  O  O21  1  -0.00000000  0.50000000  0.62559986  1
+  O  O22  1  0.62611148  0.12611148  0.20654527  1
+  O  O23  1  0.12611148  0.37388852  0.20654527  1
+  O  O24  1  0.87388852  0.62611148  0.20654527  1
+  O  O25  1  0.37388852  0.87388852  0.20654527  1

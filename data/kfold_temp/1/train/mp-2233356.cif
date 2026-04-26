@@ -1,0 +1,42 @@
+# generated using pymatgen
+data_MgCu2Ag(SO5)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.89393351
+_cell_length_b   5.88793840
+_cell_length_c   7.52324581
+_cell_angle_alpha   105.49813425
+_cell_angle_beta   101.12880505
+_cell_angle_gamma   114.72312795
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgCu2Ag(SO5)2
+_chemical_formula_sum   'Mg1 Cu2 Ag1 S2 O10'
+_cell_volume   214.22654077
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.39232800  0.41118500  0.81689300  1
+  Cu  Cu1  1  0.99082600  0.49369700  0.99917600  1
+  Cu  Cu2  1  0.49430700  0.99758300  0.00098100  1
+  Ag  Ag3  1  0.94059000  0.48011800  0.43264200  1
+  S  S4  1  0.79156100  0.88490000  0.68943900  1
+  S  S5  1  0.20610100  0.08768100  0.30895200  1
+  O  O6  1  0.95842800  0.75451000  0.71553300  1
+  O  O7  1  0.02939400  0.18629200  0.23479700  1
+  O  O8  1  0.64971000  0.81920600  0.48820300  1
+  O  O9  1  0.30960700  0.19699900  0.52557800  1
+  O  O10  1  0.60062300  0.79742300  0.80082000  1
+  O  O11  1  0.98683700  0.19160300  0.79789000  1
+  O  O12  1  0.43951500  0.17524700  0.23847500  1
+  O  O13  1  0.05007800  0.78105300  0.23598900  1
+  O  O14  1  0.62919600  0.30682600  0.94800800  1
+  O  O15  1  0.33715100  0.66692700  0.01662200  1

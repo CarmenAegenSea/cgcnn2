@@ -1,0 +1,40 @@
+# generated using pymatgen
+data_Ta6S
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.28159300
+_cell_length_b   7.57393045
+_cell_length_c   7.57901122
+_cell_angle_alpha   113.81047764
+_cell_angle_beta   98.40741326
+_cell_angle_gamma   109.04374945
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ta6S
+_chemical_formula_sum   'Ta12 S2'
+_cell_volume   248.28347918
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ta  Ta0  1  0.96764200  0.18467100  0.59043400  1
+  Ta  Ta1  1  0.03235800  0.81532900  0.40956600  1
+  Ta  Ta2  1  0.70753900  0.07647500  0.29520800  1
+  Ta  Ta3  1  0.50000000  0.00000000  0.00000000  1
+  Ta  Ta4  1  0.99910200  0.57071900  0.15031500  1
+  Ta  Ta5  1  0.53685500  0.37243900  0.69192400  1
+  Ta  Ta6  1  0.66459600  0.71195000  0.86320300  1
+  Ta  Ta7  1  0.46314500  0.62756100  0.30807600  1
+  Ta  Ta8  1  0.00089800  0.42928100  0.84968500  1
+  Ta  Ta9  1  0.29246100  0.92352500  0.70479200  1
+  Ta  Ta10  1  0.00000000  0.00000000  0.00000000  1
+  Ta  Ta11  1  0.33540400  0.28805000  0.13679700  1
+  S  S12  1  0.49028500  0.71503000  0.58459300  1
+  S  S13  1  0.50971500  0.28497000  0.41540700  1

@@ -1,0 +1,40 @@
+# generated using pymatgen
+data_Zn(CrS2)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   7.07310476
+_cell_length_b   7.07310438
+_cell_length_c   7.07310597
+_cell_angle_alpha   60.00000227
+_cell_angle_beta   60.00000402
+_cell_angle_gamma   59.99999336
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Zn(CrS2)2
+_chemical_formula_sum   'Zn2 Cr4 S8'
+_cell_volume   250.21614210
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zn  Zn0  1  0.87500013  0.87500029  0.87499929  1
+  Zn  Zn1  1  0.12499987  0.12499971  0.12500071  1
+  Cr  Cr2  1  0.50000000  0.50000000  0.50000000  1
+  Cr  Cr3  1  0.50000000  0.00000000  0.50000000  1
+  Cr  Cr4  1  -0.00000000  0.50000000  0.50000000  1
+  Cr  Cr5  1  0.50000000  0.50000000  0.00000000  1
+  S  S6  1  0.74036798  0.27888638  0.74037232  1
+  S  S7  1  0.74036898  0.74037132  0.74037332  1
+  S  S8  1  0.25963102  0.25962868  0.72111362  1
+  S  S9  1  0.25963202  0.72111362  0.25962768  1
+  S  S10  1  0.25963102  0.25962868  0.25962668  1
+  S  S11  1  0.74036898  0.74037132  0.27888638  1
+  S  S12  1  0.27888711  0.74036930  0.74037130  1
+  S  S13  1  0.72111289  0.25963070  0.25962870  1

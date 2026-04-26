@@ -1,0 +1,8 @@
+---------Evaluate Model on Test Set---------------
+Test: [0/31]    Time 1.124 (1.124)      Loss 0.1736 (0.1736)    MAE 0.339 (0.339)
+Test: [10/31]   Time 1.176 (1.270)      Loss 0.1463 (0.3375)    MAE 0.335 (0.435)
+C:\Users\22616\anaconda3\envs\cgcnn\Lib\site-packages\pymatgen\io\cif.py:1224: UserWarning: Issues encountered while parsing CIF: 49 fractional coordinates rounded to ideal values to avoid issues with finite precision.
+  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
+Test: [20/31]   Time 1.350 (1.235)      Loss 0.2262 (0.3122)    MAE 0.432 (0.424)
+Test: [30/31]   Time 0.889 (1.221)      Loss 0.3222 (0.3173)    MAE 0.455 (0.425)
+ ** MAE 0.425

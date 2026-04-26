@@ -1,0 +1,52 @@
+# generated using pymatgen
+data_ZnNiTe3O8
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.19382889
+_cell_length_b   6.75686629
+_cell_length_c   11.59189676
+_cell_angle_alpha   98.05373120
+_cell_angle_beta   90.00713384
+_cell_angle_gamma   67.41473118
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   ZnNiTe3O8
+_chemical_formula_sum   'Zn2 Ni2 Te6 O16'
+_cell_volume   371.26142655
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zn  Zn0  1  0.53464369  0.53903835  0.15214361  1
+  Zn  Zn1  1  0.07359629  0.46106587  0.34779549  1
+  Ni  Ni2  1  0.45501620  0.46872316  0.85471162  1
+  Ni  Ni3  1  0.92357137  0.53141090  0.64527813  1
+  Te  Te4  1  0.82860564  0.72661564  0.94021913  1
+  Te  Te5  1  0.55494039  0.27331232  0.55985501  1
+  Te  Te6  1  0.17738670  0.26696577  0.05052288  1
+  Te  Te7  1  0.44511859  0.73299698  0.44936470  1
+  Te  Te8  1  0.32740434  -0.00001123  0.75006868  1
+  Te  Te9  1  0.66275924  0.00026073  0.24992309  1
+  O  O10  1  0.23459832  0.52536023  0.02310006  1
+  O  O11  1  0.76025968  0.47463323  0.47692541  1
+  O  O12  1  0.78887939  0.46295118  0.96417852  1
+  O  O13  1  0.25193283  0.53708885  0.53587724  1
+  O  O14  1  0.51545988  0.83862493  0.14491266  1
+  O  O15  1  0.35397224  0.16127887  0.35498164  1
+  O  O16  1  0.47646025  0.16352491  0.85342790  1
+  O  O17  1  0.63996599  0.83662665  0.64668827  1
+  O  O18  1  0.47517219  0.77315983  0.86564981  1
+  O  O19  1  0.24802125  0.22680614  0.63443082  1
+  O  O20  1  0.51809282  0.22664734  0.13508440  1
+  O  O21  1  0.74529335  0.77336348  0.36480416  1
+  O  O22  1  0.05795468  0.60275513  0.80161879  1
+  O  O23  1  0.66071975  0.39712340  0.69843486  1
+  O  O24  1  0.94472769  0.40013045  0.18779780  1
+  O  O25  1  0.34544824  0.59954688  0.31220433  1

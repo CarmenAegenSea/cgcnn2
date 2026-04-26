@@ -1,0 +1,42 @@
+# generated using pymatgen
+data_MgV4ZnO10
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   3.52079886
+_cell_length_b   5.33775031
+_cell_length_c   11.77546524
+_cell_angle_alpha   90.01494532
+_cell_angle_beta   89.98193812
+_cell_angle_gamma   105.35658012
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgV4ZnO10
+_chemical_formula_sum   'Mg1 V4 Zn1 O10'
+_cell_volume   213.39687115
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.59633800  0.97248300  0.25012400  1
+  V  V1  1  0.22540000  0.42747700  0.10202900  1
+  V  V2  1  0.78849200  0.58307700  0.90004600  1
+  V  V3  1  0.78859400  0.58301900  0.59995700  1
+  V  V4  1  0.22603100  0.42739800  0.39793600  1
+  Zn  Zn5  1  0.11586700  0.17911200  0.75001900  1
+  O  O6  1  0.69726400  0.38577700  0.74998300  1
+  O  O7  1  0.31332400  0.60311700  0.25002800  1
+  O  O8  1  0.77746600  0.55759400  0.06869900  1
+  O  O9  1  0.23031300  0.44080000  0.92954900  1
+  O  O10  1  0.77789700  0.55747300  0.43128400  1
+  O  O11  1  0.23049000  0.44077500  0.57040900  1
+  O  O12  1  0.10402800  0.10656300  0.35740800  1
+  O  O13  1  0.93279500  0.89962400  0.63243600  1
+  O  O14  1  0.93280600  0.89965000  0.86755400  1
+  O  O15  1  0.10212100  0.10671100  0.14249000  1

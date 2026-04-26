@@ -1,0 +1,43 @@
+# generated using pymatgen
+data_MgTl6(SbS4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.65877862
+_cell_length_b   7.00442978
+_cell_length_c   12.92588049
+_cell_angle_alpha   81.08938085
+_cell_angle_beta   106.45587194
+_cell_angle_gamma   107.65025744
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgTl6(SbS4)2
+_chemical_formula_sum   'Mg1 Tl6 Sb2 S8'
+_cell_volume   549.38993161
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.78560337  0.56449172  0.81918752  1
+  Tl  Tl1  1  0.60449193  0.44724442  0.50388834  1
+  Tl  Tl2  1  0.19900750  0.69791769  0.19411317  1
+  Tl  Tl3  1  0.00780236  0.02497542  0.48275315  1
+  Tl  Tl4  1  0.93471750  0.11313343  0.03551166  1
+  Tl  Tl5  1  0.27858789  0.77999493  0.72100636  1
+  Tl  Tl6  1  0.50526810  0.54218804  0.97963038  1
+  Sb  Sb7  1  0.93320915  0.15746921  0.76046209  1
+  Sb  Sb8  1  0.66862694  0.24851376  0.23511755  1
+  S  S9  1  0.03366853  0.23631304  0.26412657  1
+  S  S10  1  0.55096768  0.06285415  0.38562398  1
+  S  S11  1  0.73910866  0.82950677  0.67720790  1
+  S  S12  1  0.59168253  0.24656360  0.73926631  1
+  S  S13  1  0.05286450  0.37531684  0.60991687  1
+  S  S14  1  0.46082604  0.11279089  0.06824124  1
+  S  S15  1  0.65920142  0.58850153  0.21343296  1
+  S  S16  1  0.08373189  0.54532356  0.96849195  1

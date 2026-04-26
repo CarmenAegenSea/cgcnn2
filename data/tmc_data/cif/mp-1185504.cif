@@ -1,0 +1,28 @@
+# generated using pymatgen
+data_LuTe
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   4.00510083
+_cell_length_b   4.00524856
+_cell_length_c   3.96829586
+_cell_angle_alpha   90.00021826
+_cell_angle_beta   89.99980087
+_cell_angle_gamma   119.99849787
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   LuTe
+_chemical_formula_sum   'Lu1 Te1'
+_cell_volume   55.12951550
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Lu  Lu0  1  0.66666458  0.33331697  0.74998820  1
+  Te  Te1  1  0.33333942  0.66668303  0.25001080  1

@@ -1,0 +1,47 @@
+# generated using pymatgen
+data_La4Mn(Cu3S5)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.58875881
+_cell_length_b   7.29630154
+_cell_length_c   8.81708193
+_cell_angle_alpha   96.43298256
+_cell_angle_beta   105.73933488
+_cell_angle_gamma   89.87984219
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   La4Mn(Cu3S5)2
+_chemical_formula_sum   'La4 Mn1 Cu6 S10'
+_cell_volume   405.22974747
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  La  La0  1  0.72374838  0.92621901  0.82701741  1
+  La  La1  1  0.05805462  0.41047593  0.75278418  1
+  La  La2  1  0.94194538  0.58952407  0.24721582  1
+  La  La3  1  0.27625162  0.07378099  0.17298259  1
+  Mn  Mn4  1  0.50000000  0.50000000  0.50000000  1
+  Cu  Cu5  1  0.55550956  0.33731356  0.95051523  1
+  Cu  Cu6  1  0.77667546  0.20360901  0.34458800  1
+  Cu  Cu7  1  0.22332454  0.79639099  0.65541200  1
+  Cu  Cu8  1  0.44449044  0.66268644  0.04948477  1
+  Cu  Cu9  1  0.66820773  0.90453714  0.42585289  1
+  Cu  Cu10  1  0.33179227  0.09546286  0.57414711  1
+  S  S11  1  0.12833695  0.29485134  0.42611370  1
+  S  S12  1  0.52862455  0.41435372  0.21653728  1
+  S  S13  1  0.87166305  0.70514866  0.57388630  1
+  S  S14  1  0.90959415  0.27055877  0.00022569  1
+  S  S15  1  0.31844803  0.09232894  0.83174606  1
+  S  S16  1  0.68046223  0.19213698  0.58095114  1
+  S  S17  1  0.31953777  0.80786302  0.41904886  1
+  S  S18  1  0.09040585  0.72944123  0.99977431  1
+  S  S19  1  0.47137545  0.58564628  0.78346272  1
+  S  S20  1  0.68155197  0.90767106  0.16825394  1

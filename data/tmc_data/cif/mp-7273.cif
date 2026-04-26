@@ -1,0 +1,37 @@
+# generated using pymatgen
+data_Te8Rh3
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.50399414
+_cell_length_b   6.50399344
+_cell_length_c   6.50399306
+_cell_angle_alpha   90.87576063
+_cell_angle_beta   90.87577414
+_cell_angle_gamma   90.87576753
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Te8Rh3
+_chemical_formula_sum   'Te8 Rh3'
+_cell_volume   275.03408156
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Te  Te0  1  0.36960129  0.36960129  0.36960129  1
+  Te  Te1  1  0.63039771  0.63039771  0.63039771  1
+  Te  Te2  1  0.12936829  0.62309923  0.87621281  1
+  Te  Te3  1  0.87621281  0.12936829  0.62309923  1
+  Te  Te4  1  0.62309923  0.87621281  0.12936829  1
+  Te  Te5  1  0.87063171  0.37690077  0.12378719  1
+  Te  Te6  1  0.12378719  0.87063171  0.37690077  1
+  Te  Te7  1  0.37690077  0.12378719  0.87063171  1
+  Rh  Rh8  1  0.50000000  0.50000000  0.00000000  1
+  Rh  Rh9  1  -0.00000000  0.50000000  0.50000000  1
+  Rh  Rh10  1  0.50000000  0.00000000  0.50000000  1

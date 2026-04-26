@@ -1,0 +1,33 @@
+# generated using pymatgen
+data_MgTiMnO4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.79813389
+_cell_length_b   6.33524372
+_cell_length_c   6.33524459
+_cell_angle_alpha   147.91732069
+_cell_angle_beta   131.26025805
+_cell_angle_gamma   60.48733296
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgTiMnO4
+_chemical_formula_sum   'Mg1 Ti1 Mn1 O4'
+_cell_volume   91.63033682
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.86489115  0.61846778  0.24642336  1
+  Ti  Ti1  1  0.63454253  0.26065665  0.37388487  1
+  Mn  Mn2  1  0.13022016  0.98380341  0.14641776  1
+  O  O3  1  0.60048140  0.09122280  0.50925760  1
+  O  O4  1  0.22491279  0.19659958  0.02831321  1
+  O  O5  1  0.86673216  0.45202303  0.41470913  1
+  O  O6  1  0.82107681  0.77817874  0.04289806  1

@@ -1,0 +1,38 @@
+# generated using pymatgen
+data_MgCo(WO4)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.04773024
+_cell_length_b   5.76980690
+_cell_length_c   5.87322811
+_cell_angle_alpha   70.32148656
+_cell_angle_beta   91.14325178
+_cell_angle_gamma   115.27259029
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgCo(WO4)2
+_chemical_formula_sum   'Mg1 Co1 W2 O8'
+_cell_volume   144.10034390
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.97405000  0.94959300  0.71635000  1
+  Co  Co1  1  0.50002500  0.99661100  0.01892600  1
+  W  W2  1  0.26891400  0.52434800  0.66814400  1
+  W  W3  1  0.73779000  0.48182800  0.33200300  1
+  O  O4  1  0.68226400  0.71490600  0.55206100  1
+  O  O5  1  0.17043500  0.70702400  0.33611400  1
+  O  O6  1  0.23876100  0.75494900  0.80896200  1
+  O  O7  1  0.26795600  0.23075800  0.91897100  1
+  O  O8  1  0.33075700  0.29106400  0.46430700  1
+  O  O9  1  0.83651400  0.26892600  0.66987600  1
+  O  O10  1  0.72439700  0.75751700  0.05994100  1
+  O  O11  1  0.74314100  0.25105200  0.19392600  1

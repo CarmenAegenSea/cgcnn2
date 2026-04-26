@@ -1,0 +1,39 @@
+# generated using pymatgen
+data_MgTiMn3O8
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.08088431
+_cell_length_b   5.90058209
+_cell_length_c   5.98538838
+_cell_angle_alpha   60.45954135
+_cell_angle_beta   56.90550673
+_cell_angle_gamma   60.97918465
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgTiMn3O8
+_chemical_formula_sum   'Mg1 Ti1 Mn3 O8'
+_cell_volume   149.50572177
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.12499900  0.12499500  0.62501000  1
+  Ti  Ti1  1  0.62499000  0.62500900  0.12500900  1
+  Mn  Mn2  1  0.62499500  0.12502300  0.62497200  1
+  Mn  Mn3  1  0.12502100  0.62498500  0.62498800  1
+  Mn  Mn4  1  0.62498600  0.62500800  0.62497800  1
+  O  O5  1  0.83806600  0.38536600  0.39135600  1
+  O  O6  1  0.36969400  0.40033200  0.37940800  1
+  O  O7  1  0.36967100  0.85053700  0.37950400  1
+  O  O8  1  0.37052700  0.40638800  0.81673700  1
+  O  O9  1  0.87947700  0.84360300  0.43327200  1
+  O  O10  1  0.88032900  0.39946100  0.87050400  1
+  O  O11  1  0.41193500  0.86462900  0.85865900  1
+  O  O12  1  0.88030800  0.84966400  0.87060200  1

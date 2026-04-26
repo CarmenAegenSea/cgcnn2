@@ -1,0 +1,39 @@
+# generated using pymatgen
+data_Eu2MgTi2(ClO3)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   3.67620754
+_cell_length_b   6.29418656
+_cell_length_c   10.03343324
+_cell_angle_alpha   65.42504362
+_cell_angle_beta   79.44390715
+_cell_angle_gamma   73.02034877
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Eu2MgTi2(ClO3)2
+_chemical_formula_sum   'Eu2 Mg1 Ti2 Cl2 O6'
+_cell_volume   201.41834610
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Eu  Eu0  1  0.76273000  0.23947700  0.23506400  1
+  Eu  Eu1  1  0.23727000  0.76052300  0.76493600  1
+  Mg  Mg2  1  0.50000000  0.00000000  0.00000000  1
+  Ti  Ti3  1  0.57988600  0.24514400  0.59508300  1
+  Ti  Ti4  1  0.42011400  0.75485600  0.40491700  1
+  Cl  Cl5  1  0.12224200  0.67798200  0.07753200  1
+  Cl  Cl6  1  0.87775800  0.32201800  0.92246800  1
+  O  O7  1  0.60858300  0.98847500  0.79435700  1
+  O  O8  1  0.57303800  0.47737900  0.37654600  1
+  O  O9  1  0.39141700  0.01152500  0.20564300  1
+  O  O10  1  0.42696200  0.52262100  0.62345400  1
+  O  O11  1  0.14237000  0.14758400  0.56767800  1
+  O  O12  1  0.85763000  0.85241700  0.43232200  1

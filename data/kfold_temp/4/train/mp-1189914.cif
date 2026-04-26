@@ -1,0 +1,42 @@
+# generated using pymatgen
+data_ZnSi(AgS2)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.56602564
+_cell_length_b   6.42762173
+_cell_length_c   10.13643261
+_cell_angle_alpha   51.09300218
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   90.00000000
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   ZnSi(AgS2)2
+_chemical_formula_sum   'Zn2 Si2 Ag4 S8'
+_cell_volume   332.89749154
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Zn  Zn0  1  0.68534942  0.59822885  0.67919813  1
+  Zn  Zn1  1  0.31465058  0.59822885  0.17919813  1
+  Si  Si2  1  0.81613781  0.35488481  0.42594065  1
+  Si  Si3  1  0.18386219  0.35488481  0.92594065  1
+  Ag  Ag4  1  0.67939442  0.09162216  0.17248247  1
+  Ag  Ag5  1  0.32060558  0.09162216  0.67248247  1
+  Ag  Ag6  1  0.84771958  0.85725946  0.92122730  1
+  Ag  Ag7  1  0.15228042  0.85725946  0.42122730  1
+  S  S8  1  0.87459358  0.47067956  0.91369299  1
+  S  S9  1  0.12540642  0.47067956  0.41369299  1
+  S  S10  1  0.68336923  0.26581727  0.64813286  1
+  S  S11  1  0.31663077  0.26581727  0.14813286  1
+  S  S12  1  0.80114979  0.01050864  0.43932020  1
+  S  S13  1  0.19885021  0.01050864  0.93932020  1
+  S  S14  1  0.65920045  0.67434024  0.20195642  1
+  S  S15  1  0.34079955  0.67434024  0.70195642  1
