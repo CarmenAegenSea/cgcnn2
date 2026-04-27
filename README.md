@@ -64,7 +64,6 @@ python cgcnn/change/parityPlot.py
 输出结果会出现在`log`文件夹中。
 `final_candidates.csv`是最终筛选出的可用材料
 
-
 备注：
 - 在 Windows PowerShell 中运行时，注意外层与内层引号的使用；若命令出错，请尝试调整引号或在命令行中拆分为更简单的步骤。
 - 如果 `environment_cgcnn.yml` 中的环境名与 `cgcnn` 不同，请用 yml 中的名称替换上述 `conda activate` 命令。

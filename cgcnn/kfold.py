@@ -12,7 +12,7 @@ from sklearn.metrics import mean_absolute_error
 
 # =======================================================================================================
 # 配置参数
-SPLIT_BASE = r"C:\Users\22616\PycharmProjects\cgcnn2\data\catalysis_split"   # 预分割根目录
+SPLIT_BASE = r"C:\\Users\\22616\\PycharmProjects\\cgcnn2\\data\\catalysis_split"   # 预分割根目录
 WORK_BASE = "data/kfold_temp"                # 临时工作根目录
 N_FOLDS = 5                                  # 折数
 CGCNN_MAIN = os.path.join(os.path.dirname(__file__), "main.py")
@@ -118,9 +118,16 @@ def run_predict_for_val(val_folder, result_list, fold_idx, work_base):
     pred_file = os.path.join(val_folder, PREDICT_OUTPUT_FILE)
     if not os.path.exists(pred_file):
         raise FileNotFoundError(f"预测输出未找到: {pred_file}")
-    pred_df = pd.read_csv(pred_file, header=0)
-    # 假设列顺序为：id, target, prediction
+    
+    # 修改这里：不指定 header，先读进来
+    pred_df = pd.read_csv(pred_file)
+    
+    print(f"  预测文件实际列名: {list(pred_df.columns)}")
+    
+    # 只取前三列，并强制重命名
+    pred_df = pred_df.iloc[:, :3] 
     pred_df.columns = ["id", "target", "prediction"]
+    
     pred_df["id"] = pred_df["id"].astype(str)
     result_list.append(pred_df)
     print(f"  验证集预测样本数: {len(pred_df)}")

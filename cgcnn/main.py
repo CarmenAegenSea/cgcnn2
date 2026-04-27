@@ -6,6 +6,7 @@ import time
 import csv
 import warnings
 from random import sample
+import random
 
 import numpy as np
 import torch
@@ -79,6 +80,10 @@ parser.add_argument('--n-conv', default=3, type=int, metavar='N',
 parser.add_argument('--n-h', default=1, type=int, metavar='N',
                     help='number of hidden layers after pooling')
 
+# Reproducibility: optional seed for dataset shuffling and torch RNGs
+parser.add_argument('--seed', default=None, type=int,
+                    help='Optional random seed for reproducible training (affects dataset shuffle and torch RNG)')
+
 args = parser.parse_args(sys.argv[1:])
 
 args.cuda = not args.disable_cuda and torch.cuda.is_available()
@@ -92,8 +97,25 @@ else:
 def main():
     global args, best_mae_error
 
-    # load data
-    dataset = CIFData(*args.data_options)
+    # set random seed if provided
+    if getattr(args, 'seed', None) is not None:
+        random.seed(args.seed)
+        np.random.seed(args.seed)
+        torch.manual_seed(args.seed)
+        if args.cuda:
+            try:
+                torch.cuda.manual_seed_all(args.seed)
+            except Exception:
+                pass
+        try:
+            torch.backends.cudnn.deterministic = True
+            torch.backends.cudnn.benchmark = False
+        except Exception:
+            pass
+
+    # load data (pass seed into CIFData to control dataset shuffle)
+    data_root = args.data_options[0] if isinstance(args.data_options, (list, tuple)) else args.data_options
+    dataset = CIFData(data_root, random_seed=args.seed if getattr(args, 'seed', None) is not None else 123)
     collate_fn = collate_pool
     train_loader, val_loader, test_loader = get_train_val_test_loader(
         dataset=dataset,

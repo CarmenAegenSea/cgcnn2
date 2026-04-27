@@ -11,10 +11,10 @@ import pandas as pd
 from sklearn.metrics import mean_absolute_error, r2_score
 from scipy import stats
 
+# ======================================================================================================================
 # 设置中文字体（Windows->SimHei，Mac->PingFang SC）
 plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial']
 plt.rcParams['axes.unicode_minus'] = False
-
 
 def _read_prediction_csv(pred_csv: str) -> pd.DataFrame:
     df = pd.read_csv(pred_csv)
@@ -27,7 +27,7 @@ def _read_prediction_csv(pred_csv: str) -> pd.DataFrame:
         return df
     raise ValueError('预测 CSV 必须包含列 target 和 prediction，或为三列无表头格式（id,target,prediction）')
 
-
+# ======================================================================================================================
 def plot_predictions(pred_csv: str, output_dir: str) -> list:
     """Generate plots from prediction CSV and save into output_dir.
 
@@ -40,7 +40,8 @@ def plot_predictions(pred_csv: str, output_dir: str) -> list:
 
     saved = []
 
-    # 图1：预测 vs 真实 随机/散点
+# ======================================================================================================================
+# 图1：预测值与真实值对比图
     fig, ax = plt.subplots(figsize=(6, 5))
     sc = ax.scatter(y_true, y_pred, alpha=0.8, edgecolors='k', linewidth=0.4, s=40)
     min_val = min(np.nanmin(y_true), np.nanmin(y_pred))
@@ -67,7 +68,8 @@ def plot_predictions(pred_csv: str, output_dir: str) -> list:
     plt.close(fig)
     saved.append(out1)
 
-    # 图2：误差分布
+# ====================================================================================================================== 
+# 图2：误差分布直方图
     errors = y_pred - y_true
     fig, ax = plt.subplots(figsize=(6, 4))
     n_bins = max(10, int(np.sqrt(len(errors))))
@@ -88,7 +90,8 @@ def plot_predictions(pred_csv: str, output_dir: str) -> list:
     plt.close(fig)
     saved.append(out2)
 
-    # 图3：尝试读取训练日志（若存在），否则回退到模拟曲线
+# ====================================================================================================================== 
+# 图3：训练损失曲线
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
     log_candidates = [
         os.path.join(repo_root, 'data', 'logs', 'training_log.csv'),
@@ -131,7 +134,7 @@ def plot_predictions(pred_csv: str, output_dir: str) -> list:
 
     return saved
 
-
+# ======================================================================================================================
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description='Plot predictions and loss curves')
