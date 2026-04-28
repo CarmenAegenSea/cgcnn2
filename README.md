@@ -50,8 +50,14 @@ python -c "import pandas as pd; df = pd.read_csv('cgcnn/data/catalysis/cif/id_pr
 
 运行预测：
 
+单模型预测
 ```bash
 python cgcnn/predict_data.py cgcnn/model_best.pth.tar data/catalysis/cif --disable-cuda --batch-size 64
+```
+
+集成模型置信度计算
+···bash
+python cgcnn/change/confidence.py
 ```
 
 后处理：
