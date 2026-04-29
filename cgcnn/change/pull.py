@@ -1,6 +1,5 @@
 """
-Materials Project 光催化剂数据拉取脚本（已验证光催化体系专版）
-聚焦：TiO2, ZnO, WO3, CdS, MoS2, g-C3N4, LDH, MXene, 钙钛矿等已被实验广泛研究的催化剂
+催化剂数据拉取脚本
 """
 
 import os
@@ -16,8 +15,8 @@ from pymatgen.io.cif import CifWriter
 # ========================================================================================================================
 # 配置参数
 API_KEY = "rdq9JwSE1rePyRtCKlqS6ZQgGWcYoz9U"
-OUTPUT_DIR = "data/catalysis"          # 输出目录
-MAX_MATERIALS = 20000                   # 每个通道最大材料数，最终总数可能略多于此值
+OUTPUT_DIR = "data/catalysis"                   # 输出目录
+MAX_MATERIALS = 20000                           # 每个通道最大材料数，最终总数可能略多于此值
 REQUEST_DELAY = 0.1
 
 MAX_ENERGY_ABOVE_HULL = 0.2                     # 排除极不稳定结构

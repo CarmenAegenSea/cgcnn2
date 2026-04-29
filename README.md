@@ -20,7 +20,7 @@ conda activate cgcnn
 python cgcnn/change/pull.py
 ```
 
-3. 运行拉取脚本（预测集，例如过渡金属 / 硫族化合物）：
+1. 运行拉取脚本（预测集，过渡金属硫族化合物）：
 
 ```bash
 python cgcnn/change/pull_data.py

@@ -4,8 +4,7 @@
 函数 filter_and_save(pred_csv, output_dir, attr_file=None, gap_min=1.6, gap_max=2.8)
 会将筛选结果写到 output_dir/final_candidates.csv并返回(filtered_df, out_path)
 
-可直接作为脚本使用：
-    python cgcnn/change/filter_candidates.py <pred_csv> --out <out_dir>
+直接作为脚本使用：python cgcnn/change/filter_candidates.py <pred_csv> --out <out_dir>
 """
 
 import os

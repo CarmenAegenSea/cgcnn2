@@ -12,7 +12,7 @@ from sklearn.metrics import mean_absolute_error, r2_score
 from scipy import stats
 
 # ======================================================================================================================
-# 设置中文字体（Windows->SimHei，Mac->PingFang SC）
+# 设置中文字体
 plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial']
 plt.rcParams['axes.unicode_minus'] = False
 
