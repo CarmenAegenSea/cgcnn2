@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Train multiple models with different random seeds and save checkpoints per-seed.
 
 Usage example:
