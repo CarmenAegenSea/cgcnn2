@@ -30,7 +30,7 @@ EXTRA_ARGS = [
 # 内部验证比例（从训练集中划分，用于早停）
 INTERNAL_VAL_RATIO = 0.1
 
-# 预测输出文件名（与 predict_data.py 输出一致）
+# 预测输出文件名（与predict_data.py输出一致）
 PREDICT_OUTPUT_FILE = "test_results_final.csv"
 
 # ======================================================================================================
@@ -60,7 +60,7 @@ def prepare_train_dir(fold_idx, train_folders, work_base):
     train_combined.to_csv(os.path.join(train_dir, "id_prop.csv"), index=False, header=False)
     print(f"  训练集样本数: {len(train_combined)}")
 
-    # 复制所有训练文件夹中的 .cif 文件
+    # 复制所有训练文件夹中的.cif文件
     copied = 0
     for folder in train_folders:
         for fname in os.listdir(folder):
@@ -119,7 +119,7 @@ def run_predict_for_val(val_folder, result_list, fold_idx, work_base):
     if not os.path.exists(pred_file):
         raise FileNotFoundError(f"预测输出未找到: {pred_file}")
     
-    # 修改这里：不指定 header，先读进来
+    # 修改这里：不指定header，先读进来
     pred_df = pd.read_csv(pred_file)
     
     print(f"  预测文件实际列名: {list(pred_df.columns)}")
