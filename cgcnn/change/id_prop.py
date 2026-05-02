@@ -10,7 +10,7 @@ from pathlib import Path
 
 # =====================================================================================================================
 # 配置参数
-CIF_DIR = r"C:\Users\22616\PycharmProjects\cgcnn2\data\catalysis\cif"                          # CIF 文件目录
+CIF_DIR = r"C:\\Users\\22616\\PycharmProjects\\cgcnn2\\data\\catalysis\\cif"                          # CIF 文件目录
 OUTPUT_FILE = "data/catalysis/cif/id_prop.csv"           # 输出文件路径
 SOURCE_CSV = "data/catalysis/catalysis.csv"               # 属性表路径
 
