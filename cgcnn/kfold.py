@@ -19,12 +19,12 @@ CGCNN_MAIN = os.path.join(os.path.dirname(__file__), "main.py")
 CGCNN_PREDICT = os.path.join(os.path.dirname(__file__), "predict_data.py")
 USE_CUDA = True
 
-# 训练超参数
+# 训练参数
 EXTRA_ARGS = [
-    "--epochs", "200",
-    "--batch-size", "32",
-    "--lr", "0.01",
-    "--optim", "SGD",
+    "--epochs", "500",
+    "--batch-size", "256",
+    "--lr", "0.001",
+    "--optim", "Adam",
 ]
 
 # 内部验证比例（从训练集中划分，用于早停）

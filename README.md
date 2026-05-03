@@ -35,8 +35,14 @@ python cgcnn/change/id_prop_data.py
 5. 训练示例（在项目根目录运行，data 路径为数据目录）：
 
 ```bash
-python cgcnn/main.py --train-ratio 0.8 --val-ratio 0.1 --test-ratio 0.1 --epochs 200 --batch-size 32 --lr 0.01 data/catalysis/cif
+python cgcnn/main.py --train-ratio 0.8 --val-ratio 0.1 --test-ratio 0.1 --epochs 500 --batch-size 128 --lr 0.001 --n-conv 6 --h-fea-len 128 --workers 8 --print-freq 50 data/catalysis/cif
 ```
++ --train-ratio 训练集占比
++ --val-ratio 验证集占比
++ --test-ratio 测试集占比
++ --epochs 轮数
++ --batch-size 128
++ --lr 学习率
 
 预测时需要使用训练集的 mean 和 std：
 

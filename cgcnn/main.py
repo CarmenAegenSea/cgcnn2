@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="pymatgen")
+
 import argparse
 import os
 import shutil

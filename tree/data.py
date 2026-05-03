@@ -5,7 +5,7 @@ from matminer.featurizers.composition import ElementProperty
 from pymatgen.core import Composition
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, KFold
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import joblib
 
@@ -43,7 +43,44 @@ def main():
     X = X.reset_index(drop=True)
     y = df['band_gap'].reset_index(drop=True).to_numpy().reshape(-1, 1)
 
-    # 3. 数据集划分
+    # 3a. 五折交叉验证（在整个数据集上评估）
+    print(">>> 进行 5 折交叉验证...")
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    cv_results = []
+    fold_idx = 1
+    for train_idx, val_idx in kf.split(X):
+        X_tr, X_val = X.iloc[train_idx], X.iloc[val_idx]
+        y_tr, y_val = y[train_idx], y[val_idx]
+
+        # 对目标值在训练折上做标准化
+        scaler_cv = StandardScaler()
+        y_tr_scaled = scaler_cv.fit_transform(y_tr)
+
+        model_cv = RandomForestRegressor(n_estimators=200, max_depth=15, random_state=42, n_jobs=-1)
+        model_cv.fit(X_tr, y_tr_scaled.ravel())
+
+        y_val_pred_scaled = model_cv.predict(X_val).reshape(-1, 1)
+        y_val_pred = scaler_cv.inverse_transform(y_val_pred_scaled)
+
+        mae_cv = mean_absolute_error(y_val, y_val_pred)
+        rmse_cv = np.sqrt(mean_squared_error(y_val, y_val_pred))
+        r2_cv = r2_score(y_val, y_val_pred)
+
+        print(f"  Fold {fold_idx}: MAE={mae_cv:.4f}, RMSE={rmse_cv:.4f}, R2={r2_cv:.4f}")
+        cv_results.append({"fold": fold_idx, "mae": mae_cv, "rmse": rmse_cv, "r2": r2_cv})
+        fold_idx += 1
+
+    cv_df = pd.DataFrame(cv_results)
+    print(">>> 5 折交叉验证汇总:")
+    print(f"  MAE:  {cv_df['mae'].mean():.4f} ± {cv_df['mae'].std():.4f}")
+    print(f"  RMSE: {cv_df['rmse'].mean():.4f} ± {cv_df['rmse'].std():.4f}")
+    print(f"  R2:   {cv_df['r2'].mean():.4f} ± {cv_df['r2'].std():.4f}")
+    try:
+        cv_df.to_csv('cv_results_5fold.csv', index=False)
+    except Exception:
+        pass
+
+    # 3. 数据集划分（用于最终的 hold-out 评估）
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # --- 核心步骤：Z-score 标准化 ---
