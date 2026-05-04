@@ -12,9 +12,9 @@ from sklearn.metrics import mean_absolute_error
 
 # =======================================================================================================
 # 配置参数
-SPLIT_BASE = r"C:\\Users\\22616\\PycharmProjects\\cgcnn2\\data\\catalysis_split"   # 预分割根目录
-WORK_BASE = "data/kfold_temp"                # 临时工作根目录
-N_FOLDS = 5                                  # 折数
+SPLIT_BASE = r"C:\\Users\\22616\\PycharmProjects\\cgcnn2\\data\\catalysis_split"    # 预分割根目录
+WORK_BASE = "data/kfold_temp"                                                       # 临时工作根目录
+N_FOLDS = 5                                                                         # 折数
 CGCNN_MAIN = os.path.join(os.path.dirname(__file__), "main.py")
 CGCNN_PREDICT = os.path.join(os.path.dirname(__file__), "predict_data.py")
 USE_CUDA = True
