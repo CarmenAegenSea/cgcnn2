@@ -1,0 +1,3 @@
+{'r2': 0.8827924278071739, 'rmse': np.float64(0.165246592206841), 'mae': 0.12896618642620838}
+model: C:\Users\22616\PycharmProjects\cgcnn2\Rotation forest46+REPTree\experiments\models\rotation_forest_model.joblib
+predictions: C:\Users\22616\PycharmProjects\cgcnn2\Rotation forest46+REPTree\experiments\outputs\predictions.csv

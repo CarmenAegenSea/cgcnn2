@@ -1,0 +1,11 @@
+source: C:\Users\22616\PycharmProjects\cgcnn2\data\catalysis\catalysis.csv
+local_copy: C:\Users\22616\PycharmProjects\cgcnn2\Rotation forest46+REPTree\data\catalysis.csv
+target: formation_energy_per_atom
+fold_metrics:
+{'fold': 1, 'r2': 0.7859116674586287, 'rmse': 0.39259999226360387, 'mae': 0.27424336062041565}
+{'fold': 2, 'r2': 0.7616116855948375, 'rmse': 0.40564650071266495, 'mae': 0.2775974696183944}
+{'fold': 3, 'r2': 0.7608043013990576, 'rmse': 0.4139640067340944, 'mae': 0.2772263984821381}
+{'fold': 4, 'r2': 0.7628112002677555, 'rmse': 0.4050399564418987, 'mae': 0.2766024229914452}
+{'fold': 5, 'r2': 0.7475001120869019, 'rmse': 0.41972101380720195, 'mae': 0.28777028318697345}
+overall:
+{'r2_mean': 0.7637277933614363, 'r2_std': 0.012404247415633844, 'rmse_mean': 0.40739429399189275, 'rmse_std': 0.00919323878939365, 'mae_mean': 0.2786879869798734, 'mae_std': 0.0046886640756385696}
