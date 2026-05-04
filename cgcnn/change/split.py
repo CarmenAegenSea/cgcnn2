@@ -86,7 +86,7 @@ def main():
         else:
             print(f"  警告：未复制 atom_init.json 到 Fold {i}")
 
-    print("\n随机分配完成！生成的文件夹：")
+    print("\n随机分配完成，生成的文件夹：")
     for i in range(1, 6):
         print(f"  {os.path.join(OUTPUT_ROOT, str(i))}")
 

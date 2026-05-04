@@ -203,7 +203,7 @@ def fetch_all_tmcs(
         else:
             print("无数据")
 
-    print(f"\n查询完成！")
+    print(f"\n查询完成")
     print(f"  有效化学体系组合: {successful_combinations}/{total_combinations}")
     print(f"  总材料数: {total_materials_found}")
 
@@ -285,7 +285,7 @@ def main():
 
     api_key = get_api_key()
     if not api_key:
-        print("错误：未找到API密钥！")
+        print("错误：未找到API密钥")
         print("请设置环境变量 MP_API_KEY 或修改脚本中的 API_KEY 变量")
         print("获取方式：登录 https://materialsproject.org，进入Dashboard")
         return

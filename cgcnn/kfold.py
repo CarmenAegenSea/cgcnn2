@@ -27,10 +27,10 @@ EXTRA_ARGS = [
     "--optim", "Adam",
 ]
 
-# 内部验证比例（从训练集中划分，用于早停）
+# 内部验证比例
 INTERNAL_VAL_RATIO = 0.1
 
-# 预测输出文件名（与predict_data.py输出一致）
+# 预测输出文件名
 PREDICT_OUTPUT_FILE = "test_results_final.csv"
 
 # ======================================================================================================
@@ -45,7 +45,7 @@ def prepare_train_dir(fold_idx, train_folders, work_base):
         shutil.rmtree(train_dir)
     os.makedirs(train_dir)
 
-    # 合并训练集的 id_prop.csv
+    # 合并训练集的id_prop.csv
     train_dfs = []
     for folder in train_folders:
         csv_path = os.path.join(folder, "id_prop.csv")
@@ -67,7 +67,7 @@ def prepare_train_dir(fold_idx, train_folders, work_base):
             if fname.lower().endswith(".cif"):
                 src = os.path.join(folder, fname)
                 dst = os.path.join(train_dir, fname)
-                if not os.path.exists(dst):   # 避免重复复制（若不同文件夹有同名文件，理论不应出现）
+                if not os.path.exists(dst):   # 避免重复复制
                     shutil.copy2(src, dst)
                     copied += 1
     print(f"  复制了 {copied} 个 .cif 文件到训练目录")
@@ -189,7 +189,7 @@ def main():
         train_df = pd.read_csv(os.path.join(train_dir, "id_prop.csv"), header=None, names=["id", "target"])
         train_size = len(train_df)
 
-        # 训练
+        # 开始训练
         run_cgcnn(train_dir, train_size)
 
         # 修补检查点
@@ -207,7 +207,7 @@ def main():
     final_df.to_csv(out_path, index=False)
 
     mae = mean_absolute_error(final_df["target"], final_df["prediction"])
-    print(f"所有折训练完毕！汇总预测结果已保存至: {out_path}")
+    print(f"所有折训练完毕，汇总预测结果已保存至: {out_path}")
     print(f"5 折交叉验证 MAE: {mae:.4f} eV")
 
 if __name__ == "__main__":
