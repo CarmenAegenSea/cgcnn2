@@ -1,0 +1,14 @@
+Data: C:\Users\22616\PycharmProjects\cgcnn2\data\catalysis\catalysis.csv
+Target: formation_energy_per_atom
+Keywords matched: band_gap, energy_above_hull, cbm, vbm
+High-corr suspects: None
+
+Top correlated features:
+          feature  pearson_r    abs_r        pvalue    n
+         band_gap  -0.254611 0.254611 1.134707e-145 9858
+              cbm  -0.232720 0.232720 2.346877e-121 9858
+           nsites  -0.138430 0.138430  2.243779e-43 9858
+          density  -0.104769 0.104769  1.815724e-25 9858
+              vbm  -0.032547 0.032547  1.229317e-03 9858
+energy_above_hull   0.022419 0.022419  2.602047e-02 9858
+           volume  -0.010678 0.010678  2.891202e-01 9858

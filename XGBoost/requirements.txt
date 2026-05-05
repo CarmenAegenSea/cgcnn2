@@ -4,3 +4,6 @@ scikit-learn
 xgboost
 joblib
 pymatgen
+shap
+matplotlib
+seaborn

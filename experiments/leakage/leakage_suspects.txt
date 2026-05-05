@@ -1,0 +1,7 @@
+Name-based matches:
+band_gap
+energy_above_hull
+cbm
+vbm
+
+High-correlation suspects (abs r >= 0.900):
