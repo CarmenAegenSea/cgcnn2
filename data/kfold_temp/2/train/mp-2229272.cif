@@ -1,0 +1,43 @@
+# generated using pymatgen
+data_MgTi2(Fe2O5)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   3.69204553
+_cell_length_b   5.51156424
+_cell_length_c   11.01287768
+_cell_angle_alpha   99.29172102
+_cell_angle_beta   89.99941535
+_cell_angle_gamma   70.43263455
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgTi2(Fe2O5)2
+_chemical_formula_sum   'Mg1 Ti2 Fe4 O10'
+_cell_volume   208.03489796
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.50388489  0.99189852  0.99018335  1
+  Ti  Ti1  1  0.17467004  0.65063666  0.10502512  1
+  Ti  Ti2  1  0.85959346  0.28080924  0.55401565  1
+  Fe  Fe3  1  0.14187123  0.71640625  0.43996710  1
+  Fe  Fe4  1  0.14511067  0.70954529  0.72716746  1
+  Fe  Fe5  1  0.84780672  0.30440451  0.26917510  1
+  Fe  Fe6  1  0.82602742  0.34786937  0.88230905  1
+  O  O7  1  0.01941648  0.96119383  0.61529436  1
+  O  O8  1  0.03526791  0.92932904  0.88002403  1
+  O  O9  1  0.67249247  0.65503350  0.05732027  1
+  O  O10  1  0.70680609  0.58649943  0.44320352  1
+  O  O11  1  0.24138966  0.51730751  0.25239819  1
+  O  O12  1  0.73078445  0.53821809  0.73463836  1
+  O  O13  1  0.32209735  0.35573989  0.96498931  1
+  O  O14  1  0.30078312  0.39838447  0.57067464  1
+  O  O15  1  0.96800753  0.06405779  0.39937975  1
+  O  O16  1  0.99283052  0.01454163  0.12516973  1

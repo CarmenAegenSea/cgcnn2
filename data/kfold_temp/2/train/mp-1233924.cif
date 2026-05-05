@@ -1,0 +1,51 @@
+# generated using pymatgen
+data_MgCr2Cu2(WO4)4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.10523288
+_cell_length_b   7.53542474
+_cell_length_c   7.53541716
+_cell_angle_alpha   99.69799289
+_cell_angle_beta   90.98409540
+_cell_angle_gamma   90.98406761
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgCr2Cu2(WO4)4
+_chemical_formula_sum   'Mg1 Cr2 Cu2 W4 O16'
+_cell_volume   285.64417399
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.74999796  0.55033638  0.44966441  1
+  Cr  Cr1  1  0.74998160  0.81544858  0.18454613  1
+  Cr  Cr2  1  0.25001288  0.18091677  0.81908870  1
+  Cu  Cu3  1  0.74999914  0.32417198  0.67582556  1
+  Cu  Cu4  1  0.24999084  0.68042671  0.31956824  1
+  W  W5  1  0.75222630  0.30743011  0.13798466  1
+  W  W6  1  0.24342400  0.67270808  0.83873481  1
+  W  W7  1  0.74777621  0.86201605  0.69257047  1
+  W  W8  1  0.25657655  0.16126324  0.32729307  1
+  O  O9  1  0.41737408  0.70024163  0.06055663  1
+  O  O10  1  0.58603562  0.29464464  0.91806064  1
+  O  O11  1  0.08262510  0.93944691  0.29975899  1
+  O  O12  1  0.91396892  0.08193735  0.70535541  1
+  O  O13  1  0.91715331  0.80352768  0.93011018  1
+  O  O14  1  0.10465973  0.19218314  0.07154414  1
+  O  O15  1  0.58284918  0.06989013  0.19647245  1
+  O  O16  1  0.39534266  0.92845693  0.80781786  1
+  O  O17  1  0.89545380  0.56577313  0.19826699  1
+  O  O18  1  0.11759500  0.43619468  0.81700911  1
+  O  O19  1  0.60454215  0.80173176  0.43422614  1
+  O  O20  1  0.38240985  0.18299198  0.56380699  1
+  O  O21  1  0.55532903  0.60366097  0.69558506  1
+  O  O22  1  0.45931568  0.39858827  0.30483152  1
+  O  O23  1  0.94467485  0.30441713  0.39634006  1
+  O  O24  1  0.04068557  0.69516674  0.60141077  1
