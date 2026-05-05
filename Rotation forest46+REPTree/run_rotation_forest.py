@@ -41,6 +41,7 @@ def main():
     parser.add_argument('--random_state', type=int, default=0)
     parser.add_argument('--use_weka', action='store_true', help='Try to use Weka REPTree (requires weka.jar and java).')
     parser.add_argument('--weka_jar', default=os.path.join(BASE_DIR, 'weka.jar'))
+    parser.add_argument('--weka_tmp', default=None, help='Directory to store per-estimator Weka ARFF/models')
     args = parser.parse_args()
 
     data_path = args.data
@@ -52,8 +53,23 @@ def main():
     if args.target not in df.columns:
         raise ValueError('目标列 %s 不存在于数据中' % args.target)
 
-    X = df.drop(columns=[args.target]).values
-    y = df[args.target].values
+    # Select numeric features only to avoid object dtype (ids, strings)
+    df = df.copy()
+    # ensure target numeric
+    df[args.target] = pd.to_numeric(df[args.target], errors='coerce')
+    numeric = df.select_dtypes(include=[np.number])
+    if args.target not in numeric.columns:
+        raise ValueError('目标列 %s 不是数值类型或包含非数值数据' % args.target)
+
+    X_df = numeric.drop(columns=[args.target])
+    y = numeric[args.target].values
+    X = X_df.values
+
+    # drop rows with NaN in features or target
+    mask = ~np.isnan(y)
+    mask = mask & (~np.isnan(X).any(axis=1))
+    X = X[mask]
+    y = y[mask]
 
     outputs_dir = os.path.join(BASE_DIR, 'experiments', 'outputs')
     models_dir = os.path.join(BASE_DIR, 'experiments', 'models')
@@ -64,14 +80,22 @@ def main():
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=args.random_state)
 
-    if args.use_weka and ensure_weka_available(args.weka_jar):
-        print('检测到 weka.jar，但当前脚本使用 sklearn 回退（Weka 支持在 weka_utils 中提供，但需要 Java 环境）。')
+    # Check Weka availability (jar file) and fall back to sklearn if missing
+    use_weka = False
+    if args.use_weka:
+        if ensure_weka_available(args.weka_jar):
+            print('Detected weka.jar - will attempt to use Weka REPTree as base learner.')
+            use_weka = True
+        else:
+            print('Weka requested but weka.jar not found at', args.weka_jar, '\nFalling back to sklearn DecisionTree base learner.')
     if args.task == 'regression':
         model = RotationForestRegressor(n_estimators=args.n_estimators, K=args.K,
-                                       sample_percent=args.sample_percent, random_state=args.random_state)
+                                       sample_percent=args.sample_percent, random_state=args.random_state,
+                                       use_weka=use_weka, weka_jar=args.weka_jar, weka_tmp_dir=args.weka_tmp)
     else:
         model = RotationForestClassifier(n_estimators=args.n_estimators, K=args.K,
-                                         sample_percent=args.sample_percent, random_state=args.random_state)
+                                         sample_percent=args.sample_percent, random_state=args.random_state,
+                                         use_weka=use_weka, weka_jar=args.weka_jar, weka_tmp_dir=args.weka_tmp)
 
     print('Training: n_estimators=%d K=%d' % (args.n_estimators, args.K))
     model.fit(X_train, y_train)

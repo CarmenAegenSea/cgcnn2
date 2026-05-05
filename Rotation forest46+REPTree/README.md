@@ -31,3 +31,6 @@ python run_rotation_forest.py --n_estimators 46 --K 3
 如果需要，我可以：
 - 将脚本改为对接你已有的特征生成（例如 matminer/论文描述符）；
 - 完整实现 Weka 的训练/预测流水线并演示（需要 Java + weka.jar 可用）。
+
+python run_cv_rotation_forest.py --source "C:\Users\22616\PycharmProjects\cgcnn2\data\catalysis\catalysis.csv" --target formation_energy_per_atom --n_estimators 46 --K 3 --folds 5
+

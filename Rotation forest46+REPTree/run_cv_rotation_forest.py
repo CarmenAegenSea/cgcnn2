@@ -159,6 +159,9 @@ def main():
     parser.add_argument('--K', type=int, default=3)
     parser.add_argument('--sample_percent', type=float, default=0.75)
     parser.add_argument('--folds', type=int, default=5)
+    parser.add_argument('--use_weka', action='store_true', help='Use Weka REPTree as base learner')
+    parser.add_argument('--weka_jar', default=os.path.join(BASE_DIR, 'weka.jar'))
+    parser.add_argument('--weka_tmp', default=None, help='Directory to store per-estimator Weka ARFF/models')
     parser.add_argument('--random_state', type=int, default=0)
     args = parser.parse_args()
 
