@@ -12,13 +12,6 @@ except Exception:
 
 
 class ABX3Featurizer:
-    """Featurizer for ABX3 perovskite composition data.
-
-    输入要求（至少一种）：
-    - 三列 `A`, `B`, `X`
-    - 或者 `formula` 列（例如 `CsPbI3`），脚本会尝试识别 X（计数最大）并把剩余两个元素视为 A/B。
-    """
-
     def __init__(self):
         if not _HAS_PYMATGEN:
             raise ImportError("pymatgen is required for featurization. Install via 'pip install pymatgen' or use the provided requirements.txt")
