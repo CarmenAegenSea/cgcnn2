@@ -133,7 +133,7 @@ def run_predict_for_val(val_folder, result_list, fold_idx, work_base):
     print(f"  验证集预测样本数: {len(pred_df)}")
 
 def patch_model_checkpoint(fold_work_dir):
-    """修补模型参数以兼容 predict.py"""
+    """修补模型参数以兼容 predict_data.py"""
     model_path = os.path.join(fold_work_dir, "train", "model_best.pth.tar")
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"模型文件不存在: {model_path}")

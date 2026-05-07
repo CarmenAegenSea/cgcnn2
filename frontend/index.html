@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>光催化材料筛选原型</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="top-overview">
+      <div class="title">光催化材料高通量筛选系统（原型）</div>
+      <div class="overview-cards">
+        <div class="card small">
+          <div class="label">训练样本</div>
+          <div class="value" id="metric-samples">1986</div>
+        </div>
+        <div class="card small">
+          <div class="label">模型</div>
+          <div class="value" id="metric-model">CGCNN</div>
+        </div>
+        <div class="card small">
+          <div class="label">MAE</div>
+          <div class="value" id="metric-mae">0.366 eV</div>
+        </div>
+        <div class="card small">
+          <div class="label">候选数量</div>
+          <div class="value" id="metric-cands">0</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      <aside class="left-panel">
+        <h3>筛选条件</h3>
+        <div class="form-row">
+          <label>带隙范围 (eV)</label>
+          <div class="inline-inputs"><input id="bg-min" type="number" step="0.1" value="1.5"> — <input id="bg-max" type="number" step="0.1" value="3.5"></div>
+        </div>
+        <div class="form-row">
+          <label>形成能阈值 (eV/atom) ≤</label>
+          <input id="formation-threshold" type="number" step="0.1" value="-0.2">
+        </div>
+        <div class="form-row">
+          <label>候选类别</label>
+          <select id="category-select">
+            <option value="All">全部</option>
+            <option value="Oxide">Oxide</option>
+            <option value="Sulfide">Sulfide</option>
+            <option value="Nitride">Nitride</option>
+          </select>
+        </div>
+        <div class="form-row buttons">
+          <button id="run-filter" class="btn primary">开始筛选</button>
+          <button id="reset" class="btn">重置</button>
+        </div>
+        <div class="note">注：静态原型，示例数据硬编码，用于展示界面与交互。</div>
+      </aside>
+
+      <section class="center-panel">
+        <div class="charts-row">
+          <div id="scatter" class="chart-card"></div>
+          <div id="hist" class="chart-card"></div>
+        </div>
+      </section>
+
+      <aside class="right-panel" id="detail-panel">
+        <div class="detail-card hidden" id="detail-card">
+          <button id="close-detail" class="close-btn">×</button>
+          <h4 id="detail-id">材料详情</h4>
+          <div id="detail-content"></div>
+          <div class="reason"><strong>被选中原因：</strong><div id="detail-reason"></div></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="table-section">
+      <h3>候选材料列表</h3>
+      <table id="candidate-table">
+        <thead>
+          <tr><th>Material ID</th><th>化学式</th><th>预测带隙 (eV)</th><th>形成能</th><th>晶系</th><th>推荐等级</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+  // === 示例数据（硬编码便于静态演示） ===
+  const SAMPLE_DATA = [
+    {"id":"mp-1001","formula":"ZnS","predicted":2.05,"true":2.00,"formation_energy":-0.45,"crystal_system":"Cubic","category":"Sulfide","stability":0.92,"recommendation":"A"},
+    {"id":"mp-1002","formula":"TiO2","predicted":3.10,"true":3.20,"formation_energy":-0.65,"crystal_system":"Tetragonal","category":"Oxide","stability":0.98,"recommendation":"A"},
+    {"id":"mp-1003","formula":"Fe2O3","predicted":2.75,"true":2.90,"formation_energy":-0.32,"crystal_system":"Trigonal","category":"Oxide","stability":0.88,"recommendation":"B"},
+    {"id":"mp-1004","formula":"Cu2O","predicted":1.85,"true":1.80,"formation_energy":-0.22,"crystal_system":"Cubic","category":"Oxide","stability":0.85,"recommendation":"B"},
+    {"id":"mp-1005","formula":"GaN","predicted":3.40,"true":3.25,"formation_energy":-0.12,"crystal_system":"Hexagonal","category":"Nitride","stability":0.80,"recommendation":"C"},
+    {"id":"mp-1006","formula":"ZnO","predicted":3.20,"true":3.30,"formation_energy":-0.50,"crystal_system":"Wurtzite","category":"Oxide","stability":0.95,"recommendation":"A"},
+    {"id":"mp-1007","formula":"MoS2","predicted":1.45,"true":1.50,"formation_energy":-0.30,"crystal_system":"Hexagonal","category":"Sulfide","stability":0.90,"recommendation":"B"},
+    {"id":"mp-1008","formula":"WS2","predicted":1.60,"true":1.55,"formation_energy":-0.28,"crystal_system":"Hexagonal","category":"Sulfide","stability":0.89,"recommendation":"B"},
+    {"id":"mp-1009","formula":"In2O3","predicted":2.95,"true":3.05,"formation_energy":-0.35,"crystal_system":"Cubic","category":"Oxide","stability":0.87,"recommendation":"B"},
+    {"id":"mp-1010","formula":"CdS","predicted":2.25,"true":2.30,"formation_energy":-0.18,"crystal_system":"Hexagonal","category":"Sulfide","stability":0.83,"recommendation":"C"},
+    {"id":"mp-1011","formula":"SnO2","predicted":3.05,"true":3.10,"formation_energy":-0.60,"crystal_system":"Rutile","category":"Oxide","stability":0.96,"recommendation":"A"},
+    {"id":"mp-1012","formula":"NiO","predicted":1.90,"true":2.00,"formation_energy":-0.25,"crystal_system":"Cubic","category":"Oxide","stability":0.82,"recommendation":"C"},
+    {"id":"mp-1013","formula":"La2O3","predicted":4.10,"true":4.00,"formation_energy":-0.70,"crystal_system":"Hexagonal","category":"Oxide","stability":0.97,"recommendation":"A"},
+    {"id":"mp-1014","formula":"Sb2S3","predicted":1.20,"true":1.25,"formation_energy":-0.15,"crystal_system":"Orthorhombic","category":"Sulfide","stability":0.78,"recommendation":"D"},
+    {"id":"mp-1015","formula":"BiVO4","predicted":2.40,"true":2.35,"formation_energy":-0.40,"crystal_system":"Monoclinic","category":"Oxide","stability":0.91,"recommendation":"A"},
+    {"id":"mp-1016","formula":"ZrO2","predicted":3.80,"true":3.85,"formation_energy":-0.55,"crystal_system":"Monoclinic","category":"Oxide","stability":0.94,"recommendation":"A"},
+    {"id":"mp-1017","formula":"AlN","predicted":6.12,"true":6.00,"formation_energy":-1.20,"crystal_system":"Wurtzite","category":"Nitride","stability":0.99,"recommendation":"A"},
+    {"id":"mp-1018","formula":"PbS","predicted":0.95,"true":1.00,"formation_energy":-0.05,"crystal_system":"Cubic","category":"Sulfide","stability":0.70,"recommendation":"D"},
+    {"id":"mp-1019","formula":"SrTiO3","predicted":3.20,"true":3.15,"formation_energy":-0.48,"crystal_system":"Cubic","category":"Oxide","stability":0.93,"recommendation":"A"},
+    {"id":"mp-1020","formula":"CaFe2O4","predicted":2.60,"true":2.55,"formation_energy":-0.33,"crystal_system":"Orthorhombic","category":"Oxide","stability":0.86,"recommendation":"B"}
+  ];
+
+  // 图表实例
+  let scatterChart, histChart;
+
+  function computeHistogram(values, nbins=12) {
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const binWidth = (max - min) / nbins || 1;
+    const counts = new Array(nbins).fill(0);
+    const labels = new Array(nbins).fill(0).map((_,i)=> (min + (i+0.5)*binWidth).toFixed(2));
+    values.forEach(v=>{
+      let idx = Math.floor((v - min)/binWidth);
+      if (idx < 0) idx = 0;
+      if (idx >= nbins) idx = nbins -1;
+      counts[idx]++;
+    });
+    return {counts, labels};
+  }
+
+  function renderScatter(data) {
+    const points = data.map(d=>[d.true, d.predicted, d.id, d.formula]);
+    const option = {
+      title:{text:'预测值 vs DFT 计算值', left:'center', textStyle:{fontSize:14}},
+      tooltip:{formatter: p => `${p.data[2]}<br/>DFT: ${p.data[0]} eV<br/>预测: ${p.data[1]} eV`},
+      xAxis:{name:'DFT (eV)'},
+      yAxis:{name:'预测 (eV)'},
+      grid:{left:40,right:20,top:40,bottom:40},
+      series:[{type:'scatter',data:points,symbolSize:10,emphasis:{focus:'series'}}]
+    };
+    scatterChart.setOption(option);
+  }
+
+  function renderHist(data) {
+    const errors = data.map(d => +(d.predicted - d.true).toFixed(3));
+    const hist = computeHistogram(errors, 12);
+    const option = {
+      title:{text:'误差分布 (预测 - DFT)', left:'center', textStyle:{fontSize:14}},
+      tooltip:{},
+      xAxis:{data: hist.labels, name:'误差 (eV)'},
+      yAxis:{name:'频数'},
+      series:[{type:'bar',data: hist.counts, itemStyle:{color:'#2A9D8F'}}]
+    };
+    histChart.setOption(option);
+  }
+
+  function populateTable(data) {
+    const tbody = document.querySelector('#candidate-table tbody');
+    tbody.innerHTML = '';
+    data.forEach(d=>{
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${d.id}</td><td>${d.formula}</td><td>${d.predicted.toFixed(2)}</td><td>${d.formation_energy.toFixed(2)}</td><td>${d.crystal_system}</td><td>${d.recommendation}</td>`;
+      tr.addEventListener('click', ()=> showDetail(d));
+      tbody.appendChild(tr);
+    });
+    document.getElementById('metric-cands').innerText = data.length;
+  }
+
+  function showDetail(d) {
+    const card = document.getElementById('detail-card');
+    document.getElementById('detail-id').innerText = d.id + ' — ' + d.formula;
+    document.getElementById('detail-content').innerHTML = `预测带隙：<strong>${d.predicted.toFixed(3)} eV</strong><br/>DFT 带隙：${d.true} eV<br/>形成能：${d.formation_energy} eV/atom<br/>晶系：${d.crystal_system}<br/>类别：${d.category}`;
+    // 简单的选中原因表达
+    const reasons = [];
+    const min = parseFloat(document.getElementById('bg-min').value);
+    const max = parseFloat(document.getElementById('bg-max').value);
+    const thr = parseFloat(document.getElementById('formation-threshold').value);
+    if (d.predicted >= min && d.predicted <= max) reasons.push('带隙位于目标范围');
+    if (d.formation_energy <= thr) reasons.push('形成能满足稳定性阈值');
+    reasons.push('预测误差较小（模型可信度）');
+    document.getElementById('detail-reason').innerHTML = reasons.join('；');
+    card.classList.remove('hidden');
+  }
+
+  function hideDetail() {
+    document.getElementById('detail-card').classList.add('hidden');
+  }
+
+  function applyFilter() {
+    const min = parseFloat(document.getElementById('bg-min').value);
+    const max = parseFloat(document.getElementById('bg-max').value);
+    const thr = parseFloat(document.getElementById('formation-threshold').value);
+    const cat = document.getElementById('category-select').value;
+    const filtered = SAMPLE_DATA.filter(d=>{
+      if (d.predicted < min || d.predicted > max) return false;
+      if (d.formation_energy > thr) return false; // 形成能需 <= 阈值
+      if (cat !== 'All' && d.category !== cat) return false;
+      return true;
+    });
+    renderScatter(filtered);
+    renderHist(filtered);
+    populateTable(filtered);
+  }
+
+  function resetFilters() {
+    document.getElementById('bg-min').value = 1.5;
+    document.getElementById('bg-max').value = 3.5;
+    document.getElementById('formation-threshold').value = -0.2;
+    document.getElementById('category-select').value = 'All';
+    initDisplay();
+  }
+
+  function initDisplay() {
+    document.getElementById('metric-samples').innerText = SAMPLE_DATA.length;
+    // 假设的模型 MAE（示例）
+    document.getElementById('metric-mae').innerText = '0.366 eV';
+    applyFilter();
+  }
+
+  // 初始化图表并事件
+  window.addEventListener('load', ()=>{
+    scatterChart = echarts.init(document.getElementById('scatter'));
+    histChart = echarts.init(document.getElementById('hist'));
+    initDisplay();
+    window.addEventListener('resize', ()=>{ scatterChart.resize(); histChart.resize(); });
+
+    document.getElementById('run-filter').addEventListener('click', ()=>{ applyFilter(); hideDetail(); });
+    document.getElementById('reset').addEventListener('click', ()=>{ resetFilters(); hideDetail(); });
+    document.getElementById('close-detail').addEventListener('click', hideDetail);
+  });
+  </script>
+</body>
+</html>

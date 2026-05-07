@@ -1,0 +1,44 @@
+/* 简洁学术风格：白底，蓝绿主色 */
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#ffffff; color:#1b1b1b; margin:0; }
+.page { max-width:1200px; margin:18px auto; padding:12px; }
+.top-overview { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.title { font-size:20px; font-weight:600; }
+.overview-cards { display:flex; gap:12px; }
+.card { background:#f8f9fa; padding:12px 16px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+.card.small { min-width:130px; text-align:center; }
+.card .label { font-size:12px; color:#666; }
+.card .value { font-size:18px; font-weight:600; margin-top:6px; color:#0b6b58; }
+
+.main-grid { display:grid; grid-template-columns:260px 1fr 320px; gap:16px; align-items:start; }
+.left-panel { background:transparent; padding:8px; }
+.left-panel h3 { margin-top:0; }
+.form-row { margin:10px 0; }
+.form-row label { display:block; font-size:13px; color:#333; margin-bottom:6px; }
+.inline-inputs input { width:90px; }
+input[type=number], select { width:100%; padding:8px 10px; border-radius:6px; border:1px solid #e3e3e3; }
+.buttons { display:flex; gap:8px; }
+.btn { padding:8px 12px; border-radius:6px; border:1px solid #2A9D8F; background:transparent; color:#2A9D8F; cursor:pointer; }
+.btn.primary { background:#2A9D8F; color:#fff; border-color:#2A9D8F; }
+.btn:hover { opacity:0.95; }
+.note { font-size:12px; color:#777; margin-top:10px; }
+
+.center-panel { padding:4px; }
+.charts-row { display:flex; gap:12px; }
+.chart-card { flex:1; height:360px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.04); border:1px solid #f0f0f0; }
+
+.right-panel { padding:8px; }
+.detail-card { background:#f8fdf8; border-radius:8px; padding:12px; border:1px solid #e6f3ee; position:relative; }
+.detail-card.hidden { display:none; }
+.close-btn { position:absolute; right:8px; top:6px; border:none; background:transparent; font-size:18px; cursor:pointer; }
+.detail-card h4 { margin-top:0; }
+.reason { margin-top:10px; font-size:13px; color:#2A9D8F; }
+
+.table-section { margin-top:18px; }
+#candidate-table { width:100%; border-collapse:collapse; }
+#candidate-table th, #candidate-table td { padding:10px 8px; border-bottom:1px solid #eee; text-align:left; }
+#candidate-table tbody tr:hover { background:#f6fffb; cursor:pointer; }
+
+@media (max-width:1000px) {
+  .main-grid { grid-template-columns:220px 1fr; grid-auto-rows:min-content; }
+  .right-panel { display:none; }
+}
