@@ -1,0 +1,7 @@
+{
+  "timestamp": "202605081246",
+  "n_composites_generated": 50,
+  "output_dir": "C:\\Users\\22616\\PycharmProjects\\cgcnn2\\doubleLog\\202605081246",
+  "model_dir": "C:\\Users\\22616\\PycharmProjects\\cgcnn2\\models\\ensemble",
+  "catalysis_csv": "C:\\Users\\22616\\PycharmProjects\\cgcnn2\\data\\catalysis\\catalysis.csv"
+}
