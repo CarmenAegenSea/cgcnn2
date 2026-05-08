@@ -16,7 +16,6 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from sklearn import metrics
-from torch.autograd import Variable
 from torch.optim.lr_scheduler import MultiStepLR
 
 from cgcnn.data import CIFData
@@ -82,6 +81,8 @@ parser.add_argument('--n-conv', default=3, type=int, metavar='N',
                     help='number of conv layers')
 parser.add_argument('--n-h', default=1, type=int, metavar='N',
                     help='number of hidden layers after pooling')
+parser.add_argument('--loss', choices=['mse', 'huber', 'l1'], default='huber',
+                    help='loss function (default: huber, robust to outliers)')
 
 # Reproducibility: optional seed for dataset shuffling and torch RNGs
 parser.add_argument('--seed', default=None, type=int,
@@ -167,7 +168,12 @@ def main():
     if args.task == 'classification':
         criterion = nn.NLLLoss()
     else:
-        criterion = nn.MSELoss()
+        if args.loss == 'mse':
+            criterion = nn.MSELoss()
+        elif args.loss == 'huber':
+            criterion = nn.HuberLoss()
+        elif args.loss == 'l1':
+            criterion = nn.L1Loss()
     if args.optim == 'SGD':
         optimizer = optim.SGD(model.parameters(), args.lr,
                               momentum=args.momentum,
@@ -275,13 +281,13 @@ def train(train_loader, model, criterion, optimizer, epoch, normalizer):
         data_time.update(time.time() - end)
 
         if args.cuda:
-            input_var = (Variable(input[0].cuda(non_blocking=True)),
-                         Variable(input[1].cuda(non_blocking=True)),
+            input_var = (input[0].cuda(non_blocking=True),
+                         input[1].cuda(non_blocking=True),
                          input[2].cuda(non_blocking=True),
                          [crys_idx.cuda(non_blocking=True) for crys_idx in input[3]])
         else:
-            input_var = (Variable(input[0]),
-                         Variable(input[1]),
+            input_var = (input[0],
+                         input[1],
                          input[2],
                          input[3])
         # normalize target
@@ -290,9 +296,9 @@ def train(train_loader, model, criterion, optimizer, epoch, normalizer):
         else:
             target_normed = target.view(-1).long()
         if args.cuda:
-            target_var = Variable(target_normed.cuda(non_blocking=True))
+            target_var = target_normed.cuda(non_blocking=True)
         else:
-            target_var = Variable(target_normed)
+            target_var = target_normed
 
         # compute output
         output = model(*input_var)
@@ -377,14 +383,14 @@ def validate(val_loader, model, criterion, normalizer, test=False):
     for i, (input, target, batch_cif_ids) in enumerate(val_loader):
         if args.cuda:
             with torch.no_grad():
-                input_var = (Variable(input[0].cuda(non_blocking=True)),
-                             Variable(input[1].cuda(non_blocking=True)),
+                input_var = (input[0].cuda(non_blocking=True),
+                             input[1].cuda(non_blocking=True),
                              input[2].cuda(non_blocking=True),
                              [crys_idx.cuda(non_blocking=True) for crys_idx in input[3]])
         else:
             with torch.no_grad():
-                input_var = (Variable(input[0]),
-                             Variable(input[1]),
+                input_var = (input[0],
+                             input[1],
                              input[2],
                              input[3])
         if args.task == 'regression':
@@ -393,10 +399,10 @@ def validate(val_loader, model, criterion, normalizer, test=False):
             target_normed = target.view(-1).long()
         if args.cuda:
             with torch.no_grad():
-                target_var = Variable(target_normed.cuda(non_blocking=True))
+                target_var = target_normed.cuda(non_blocking=True)
         else:
             with torch.no_grad():
-                target_var = Variable(target_normed)
+                target_var = target_normed
 
         # compute output
         output = model(*input_var)

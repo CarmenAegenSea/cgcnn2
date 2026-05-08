@@ -25,6 +25,7 @@ EXTRA_ARGS = [
     "--batch-size", "256",
     "--lr", "0.001",
     "--optim", "Adam",
+    "--loss", "huber",
 ]
 
 # 内部验证比例
