@@ -1,13 +1,13 @@
 # 运行环境配置
 
 + Python 3.11
-+ 配置文件：environment_cgcnn.yml（位于项目根目录）
++ 配置文件：environment_cgcnn.yml
   
 # 配置环境
 
 本项目部分脚本可能使用相对或绝对路径，使用前请检查脚本内的路径设置。建议在项目根目录运行下面的命令。
 
-1. 创建并激活环境（yml 中定义的名称为 `cgcnn`，如需确认请查看 `environment_cgcnn.yml` 中的 `name:` 字段）：
+1. 创建并激活环境
 
 ```bash
 conda env create -f environment_cgcnn.yml
@@ -40,9 +40,10 @@ python cgcnn/main.py --train-ratio 0.8 --val-ratio 0.1 --test-ratio 0.1 --epochs
 + --train-ratio 训练集占比
 + --val-ratio 验证集占比
 + --test-ratio 测试集占比
-+ --epochs 轮数
-+ --batch-size 128
++ --batch-size 128 批大小
 + --lr 学习率
++ --epochs 轮数
++ --loss 损失函数模式
 
 预测时需要使用训练集的 mean 和 std：
 
@@ -73,13 +74,12 @@ python cgcnn/change/filter_candidates.py
 python cgcnn/change/parityPlot.py
 ```
 
-输出结果会出现在`log`文件夹中。
+6. 5折交叉验证（在项目根目录执行）；
+```bash
+pyhton cgcnn/kfold.py 
+```
+
+输出结果会出现在`log\时间`文件夹中，5折交叉验证的结果会分在5个子文件夹里。
 `final_candidates.csv`是最终筛选出的可用材料
-
-备注：
-- 在 Windows PowerShell 中运行时，注意外层与内层引号的使用；若命令出错，请尝试调整引号或在命令行中拆分为更简单的步骤。
-- 如果 `environment_cgcnn.yml` 中的环境名与 `cgcnn` 不同，请用 yml 中的名称替换上述 `conda activate` 命令。
-  
-
 
 所有带data的文件或文件夹都是预测用的文件
