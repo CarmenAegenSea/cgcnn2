@@ -298,9 +298,10 @@ class CIFData(Dataset):
     cif_id: str or int
     """
     def __init__(self, root_dir, max_num_nbr=12, radius=8, dmin=0, step=0.2,
-                 random_seed=123):
+                 random_seed=123, occupancy_tolerance=10.0):
         self.root_dir = root_dir
         self.max_num_nbr, self.radius = max_num_nbr, radius
+        self.occupancy_tolerance = occupancy_tolerance
         assert os.path.exists(root_dir), 'root_dir does not exist!'
         id_prop_file = os.path.join(self.root_dir, 'id_prop.csv')
         assert os.path.exists(id_prop_file), 'id_prop.csv does not exist!'
@@ -321,8 +322,22 @@ class CIFData(Dataset):
     def __getitem__(self, idx):
         cif_id, target = self.id_prop_data[idx]
         crystal = Structure.from_file(os.path.join(self.root_dir,
-                                                   cif_id+'.cif'))
-        atom_fea = np.vstack([self.ari.get_atom_fea(crystal[i].specie.number)
+                                                   cif_id+'.cif'),
+                                          occupancy_tolerance=self.occupancy_tolerance)
+
+        def get_species_number(site):
+            if hasattr(site, 'specie') and site.specie:
+                return site.specie.number
+            if hasattr(site, 'species'):
+                sp = site.species
+                if hasattr(sp, 'get_el_amt_dict'):
+                    els = sp.get_el_amt_dict()
+                    if els:
+                        from pymatgen.core import Element
+                        return Element(list(els.keys())[0]).number
+            return None
+
+        atom_fea = np.vstack([self.ari.get_atom_fea(get_species_number(crystal[i]))
                               for i in range(len(crystal))])
         atom_fea = torch.Tensor(atom_fea)
         all_nbrs = crystal.get_all_neighbors(self.radius, include_index=True)

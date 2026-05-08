@@ -35,7 +35,7 @@ python cgcnn/change/id_prop_data.py
 5. 训练示例（在项目根目录运行，data 路径为数据目录）：
 
 ```bash
-python cgcnn/main.py --train-ratio 0.8 --val-ratio 0.1 --test-ratio 0.1 --epochs 500 --batch-size 128 --lr 0.001 --n-conv 6 --h-fea-len 128 --workers 8 --print-freq 50 data/catalysis/cif
+python cgcnn/main.py --train-ratio 0.8 --val-ratio 0.1 --test-ratio 0.1 --epochs 500 --batch-size 128 --lr 0.001 --n-conv 6 --h-fea-len 128 --workers 8 --print-freq 50 --loss huber data/catalysis/cif
 ```
 + --train-ratio 训练集占比
 + --val-ratio 验证集占比
@@ -62,7 +62,7 @@ python cgcnn/predict_data.py cgcnn/model_best.pth.tar data/catalysis/cif --disab
 ```
 
 集成模型置信度计算
-···bash
+```bash
 python cgcnn/change/confidence.py
 ```
 

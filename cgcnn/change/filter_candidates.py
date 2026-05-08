@@ -28,8 +28,17 @@ def _find_formation_energy_col(columns):
     return None
 
 
+def _find_energy_above_hull_col(columns):
+    for c in columns:
+        s = str(c).lower()
+        if 'energy' in s and 'hull' in s:
+            return c
+    return None
+
+
 def filter_and_save(pred_csv: str, output_dir: str, attr_file: Optional[str] = None,
-                    gap_min: float = 1.6, gap_max: float = 2.8) -> Tuple[pd.DataFrame, str]:
+                    gap_min: float = 1.6, gap_max: float = 2.8,
+                    e_above_hull_max: float = 0.10) -> Tuple[pd.DataFrame, str]:
     """Filter predictions and save final candidates to output_dir.
 
     Returns (filtered_df, out_csv_path).
@@ -68,16 +77,25 @@ def filter_and_save(pred_csv: str, output_dir: str, attr_file: Optional[str] = N
     if form_e_col is None:
         raise ValueError('未找到形成能列，请在属性表中包含名称含 "formation" 和 "energy" 的列')
 
+    # find energy above hull column
+    e_above_hull_col = _find_energy_above_hull_col(merged.columns)
+
     # build conditions (graceful if columns missing)
     cond_gap = merged['prediction'].between(gap_min, gap_max)
     cond_form = merged[form_e_col] <= 0.0 if form_e_col in merged.columns else pd.Series([True] * len(merged))
+
+    if e_above_hull_col and e_above_hull_col in merged.columns:
+        cond_hull = merged[e_above_hull_col] <= e_above_hull_max
+    else:
+        cond_hull = pd.Series([True] * len(merged))
+
     cond_stable = merged['is_stable'] == True if 'is_stable' in merged.columns else pd.Series([True] * len(merged))
 
-    filtered = merged[cond_gap & cond_form & cond_stable]
+    filtered = merged[cond_gap & cond_form & cond_hull & cond_stable]
 
-    # choose columns to output
-    preferred = ['material_id', 'formula', 'prediction', form_e_col, 'crystal_system']
-    out_cols = [c for c in preferred if c in filtered.columns]
+    # choose columns to output (include both e_above_hull and formation_energy)
+    preferred = ['material_id', 'formula', 'prediction', form_e_col, e_above_hull_col, 'crystal_system']
+    out_cols = [c for c in preferred if c is not None and c in filtered.columns]
     out_path = os.path.join(output_dir, 'final_candidates.csv')
     # always write a CSV (possibly empty) for reproducibility
     filtered.to_csv(out_path, columns=out_cols, index=False)
@@ -94,8 +112,11 @@ if __name__ == '__main__':
     parser.add_argument('--attr', help='path to attribute CSV (optional)')
     parser.add_argument('--gap-min', type=float, default=1.6)
     parser.add_argument('--gap-max', type=float, default=2.8)
+    parser.add_argument('--e-above-hull', type=float, default=0.10,
+                        help='Maximum energy above hull (eV/atom). Default: 0.10. Use 0.05 for stricter filtering.')
     args = parser.parse_args()
 
     filtered_df, out_csv = filter_and_save(args.pred_csv, args.out, attr_file=args.attr,
-                                          gap_min=args.gap_min, gap_max=args.gap_max)
+                                          gap_min=args.gap_min, gap_max=args.gap_max,
+                                          e_above_hull_max=args.e_above_hull)
     print(f'Filtered {len(filtered_df)} candidates, saved to: {out_csv}')
