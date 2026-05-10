@@ -47,8 +47,8 @@ def plot_predictions(pred_csv: str, output_dir: str) -> list:
     min_val = min(np.nanmin(y_true), np.nanmin(y_pred))
     max_val = max(np.nanmax(y_true), np.nanmax(y_pred))
     ax.plot([min_val, max_val], [min_val, max_val], 'r--', linewidth=1.5, label='y = x')
-    ax.fill_between([min_val, max_val], [min_val-0.3, max_val-0.3], [min_val+0.3, max_val+0.3],
-                    alpha=0.1, color='gray', label='±0.3 eV')
+    ax.fill_between([min_val, max_val], [min_val-0.7, max_val-0.7], [min_val+0.7, max_val+0.7],
+                    alpha=0.1, color='gray', label='±0.7 eV')
     mae = mean_absolute_error(y_true, y_pred)
     try:
         r2 = r2_score(y_true, y_pred)

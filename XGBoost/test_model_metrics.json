@@ -1,0 +1,14 @@
+{
+  "rmse": 0.9277705568752095,
+  "mae": 0.7050680498881103,
+  "r2": 0.39484258473756606,
+  "best_params": {
+    "xgb__colsample_bytree": 0.8,
+    "xgb__learning_rate": 0.1,
+    "xgb__max_depth": 6,
+    "xgb__n_estimators": 100,
+    "xgb__subsample": 1.0
+  },
+  "cv_best_score_neg_mse": -0.8201140765821636,
+  "scale_target": false
+}

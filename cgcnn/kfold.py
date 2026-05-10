@@ -103,6 +103,7 @@ def run_cgcnn(train_dir, train_size):
     print("Training command:", " ".join(cmd))
     subprocess.run(cmd, check=True, cwd=train_dir)
 
+# =============================================================================================================
 def run_predict_for_val(val_folder, result_list, fold_idx, work_base):
     """对验证文件夹进行预测，收集结果"""
     # 先在验证文件夹上运行预测脚本
