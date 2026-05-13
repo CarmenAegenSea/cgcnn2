@@ -1,0 +1,51 @@
+# generated using pymatgen
+data_Ho2MgAg2(WO4)4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   7.35369170
+_cell_length_b   7.71041125
+_cell_length_c   7.75434200
+_cell_angle_alpha   99.29907498
+_cell_angle_beta   114.62839095
+_cell_angle_gamma   113.92741435
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ho2MgAg2(WO4)4
+_chemical_formula_sum   'Ho2 Mg1 Ag2 W4 O16'
+_cell_volume   335.16313229
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ho  Ho0  1  0.01610296  0.71950656  0.27232146  1
+  Ho  Ho1  1  0.00700186  0.26023864  0.74436121  1
+  Mg  Mg2  1  0.49029804  0.16128310  0.42213565  1
+  Ag  Ag3  1  0.54894580  0.75835801  0.65606128  1
+  Ag  Ag4  1  0.48608412  0.43246147  0.22503221  1
+  W  W5  1  0.00143064  0.23634754  0.25151166  1
+  W  W6  1  0.00574314  0.74235871  0.76735400  1
+  W  W7  1  0.51265043  0.84811285  0.14539601  1
+  W  W8  1  0.49485920  0.13797280  0.85903814  1
+  O  O9  1  0.80513819  0.37116642  0.13235646  1
+  O  O10  1  0.20608012  0.61420343  0.88094480  1
+  O  O11  1  0.20765415  0.85559500  0.63347461  1
+  O  O12  1  0.80104145  0.13090239  0.38315672  1
+  O  O13  1  0.69129370  0.72479413  0.19834856  1
+  O  O14  1  0.35468509  0.28872878  0.82408701  1
+  O  O15  1  0.36773323  0.84511369  0.30353957  1
+  O  O16  1  0.65760536  0.18108494  0.70774019  1
+  O  O17  1  0.91564704  0.70726497  0.95141839  1
+  O  O18  1  0.10120514  0.28942757  0.06842051  1
+  O  O19  1  0.15219927  0.08834363  0.33255856  1
+  O  O20  1  0.90820772  0.92387729  0.69811569  1
+  O  O21  1  0.67349648  0.98594793  0.99636222  1
+  O  O22  1  0.34447903  0.00679308  0.02211443  1
+  O  O23  1  0.77106693  0.48770459  0.54125118  1
+  O  O24  1  0.20157292  0.47919850  0.47397048  1

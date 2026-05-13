@@ -1,0 +1,35 @@
+# generated using pymatgen
+data_KMgAg2SbS4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   8.22606196
+_cell_length_b   6.72522515
+_cell_length_c   9.39265879
+_cell_angle_alpha   65.07971435
+_cell_angle_beta   138.00036005
+_cell_angle_gamma   130.49124326
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   KMgAg2SbS4
+_chemical_formula_sum   'K1 Mg1 Ag2 Sb1 S4'
+_cell_volume   262.50307024
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  K  K0  1  0.00000000  0.86619141  0.02181650  1
+  Mg  Mg1  1  1.00000000  0.27150955  0.22287435  1
+  Ag  Ag2  1  0.51376472  0.27820837  0.69017147  1
+  Ag  Ag3  1  0.48623528  0.76444365  0.17640675  1
+  Sb  Sb4  1  1.00000000  0.46952365  0.49942465  1
+  S  S5  1  1.00000000  0.35935607  0.95122575  1
+  S  S6  1  0.61022274  0.24396267  0.13166419  1
+  S  S7  1  0.38977726  0.63373993  0.52144145  1
+  S  S8  1  1.00000000  0.87306470  0.42497487  1

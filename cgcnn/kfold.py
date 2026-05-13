@@ -21,7 +21,7 @@ USE_CUDA = True
 
 # 训练参数
 EXTRA_ARGS = [
-    "--epochs", "500",
+    "--epochs", "200",
     "--batch-size", "256",
     "--lr", "0.001",
     "--optim", "Adam",

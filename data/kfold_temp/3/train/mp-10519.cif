@@ -1,0 +1,38 @@
+# generated using pymatgen
+data_Cu2SnS3
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   6.64335546
+_cell_length_b   6.64068324
+_cell_length_c   6.66416191
+_cell_angle_alpha   80.29794568
+_cell_angle_beta   70.31102935
+_cell_angle_gamma   59.98668942
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Cu2SnS3
+_chemical_formula_sum   'Cu4 Sn2 S6'
+_cell_volume   239.69270829
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Cu  Cu0  1  0.43930957  0.16435427  0.98857036  1
+  Cu  Cu1  1  0.26452510  0.49453589  0.48785668  1
+  Cu  Cu2  1  0.60366384  0.83564573  0.48857036  1
+  Cu  Cu3  1  0.75906099  0.50546411  0.98785668  1
+  Sn  Sn4  1  0.90836143  0.18531989  0.50364035  1
+  Sn  Sn5  1  0.09368132  0.81468011  0.00364035  1
+  S  S6  1  0.24156900  0.81867167  0.60367480  1
+  S  S7  1  0.06023967  0.18132833  0.10367480  1
+  S  S8  1  0.40646952  0.47913348  0.12261604  1
+  S  S9  1  0.88560200  0.52086652  0.62261604  1
+  S  S10  1  0.70041608  0.83128840  0.12264178  1
+  S  S11  1  0.53170448  0.16871160  0.62264178  1

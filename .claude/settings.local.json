@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
+      "Bash(sort -t: -k1 -n)",
+      "WebSearch",
+      "WebFetch(domain:www.nature.com)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "Bash(conda env *)",
+      "Bash(conda run *)",
+      "Bash(C:\\\\Users\\\\22616\\\\anaconda3\\\\envs\\\\XGBoost\\\\python.exe -u XGBoost/kfold_cv.py)",
+      "Bash(\"/c/Users/22616/anaconda3/envs/XGBoost/python.exe\" -u XGBoost/kfold_cv.py)",
+      "Bash(\"/c/Users/22616/anaconda3/envs/cgcnn/python.exe\" -u MEGNet/kfold_cv.py)"
+    ]
+  }
+}

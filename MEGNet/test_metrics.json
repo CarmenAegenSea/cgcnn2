@@ -1,0 +1,28 @@
+{
+  "mae": 0.35392749413288305,
+  "rmse": 0.5589698432781398,
+  "r2": 0.7638831333563677,
+  "best_val_mae": 0.35443198904773304,
+  "best_epoch": 117,
+  "n_params": 191809,
+  "args": {
+    "data_root": "data/catalysis/cif",
+    "epochs": 200,
+    "batch_size": 256,
+    "lr": 0.001,
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "node_dim": 64,
+    "edge_dim": 64,
+    "hidden_dim": 128,
+    "n_blocks": 3,
+    "h_fea_len": 128,
+    "n_h": 1,
+    "disable_cuda": false,
+    "seed": 42,
+    "loss": "huber",
+    "print_freq": 50,
+    "cuda": true
+  }
+}

@@ -1,0 +1,43 @@
+# generated using pymatgen
+data_Dy4MgTi2O10
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.84989080
+_cell_length_b   7.20024748
+_cell_length_c   8.55070060
+_cell_angle_alpha   65.93090571
+_cell_angle_beta   108.81627301
+_cell_angle_gamma   131.02925811
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Dy4MgTi2O10
+_chemical_formula_sum   'Dy4 Mg1 Ti2 O10'
+_cell_volume   247.28683937
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Dy  Dy0  1  0.45252704  0.67417910  0.78122502  1
+  Dy  Dy1  1  0.31210442  0.72405870  0.13006470  1
+  Dy  Dy2  1  0.71616526  0.33935268  0.87089351  1
+  Dy  Dy3  1  0.59228388  0.38170935  0.23588237  1
+  Mg  Mg4  1  0.22123623  0.34732849  0.53204527  1
+  Ti  Ti5  1  0.94102092  0.82468445  0.46889070  1
+  Ti  Ti6  1  0.01913769  0.03279964  0.00120054  1
+  O  O7  1  0.01915646  0.60563951  0.65187016  1
+  O  O8  1  0.42564952  0.08873410  0.11393667  1
+  O  O9  1  0.60145719  0.71496882  0.54820778  1
+  O  O10  1  0.24746275  0.25703237  0.78536131  1
+  O  O11  1  0.85200341  0.65939790  0.97579001  1
+  O  O12  1  0.18283224  0.40725472  0.02138011  1
+  O  O13  1  0.78111052  0.79057472  0.23549033  1
+  O  O14  1  0.29531786  0.16210757  0.45517675  1
+  O  O15  1  0.61022230  0.97412518  0.89332007  1
+  O  O16  1  0.01156232  0.44313572  0.33497869  1
