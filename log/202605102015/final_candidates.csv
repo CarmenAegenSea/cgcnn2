@@ -1,0 +1,13 @@
+material_id,formula,prediction,formation_energy_per_atom,energy_above_hull,crystal_system
+mp-669509,Gd2S3,1.6063,-2.334843926187497,0.0,Orthorhombic
+mp-947,Au2S,1.7641,-0.118341825937501,0.0,Cubic
+mp-7368,Dy2Se3,1.7869,-2.162599036937499,0.0,Orthorhombic
+mp-20826,CuTe,1.6518,-0.0842046275,0.0,Orthorhombic
+mp-554820,ZnS,1.9826,-0.962698349620534,0.0,Trigonal
+mp-1106367,HgS4,2.6426,-0.185582542,0.0,Orthorhombic
+mp-1403,Sm2S3,1.6039,-2.366729565,0.0,Orthorhombic
+mp-1180046,NiS2,2.2345,-0.591526538333332,0.0,Monoclinic
+mp-2793,AuSe,2.0179,-0.140219074531245,0.0,Monoclinic
+mp-15179,Pr2S3,1.6987,-2.365342227854165,0.0,Orthorhombic
+mp-2418,PdSe2,2.1456,-0.32612803020833,0.0,Orthorhombic
+mp-1232181,Pm2Se3,1.8118,-2.213014863437499,0.0,Orthorhombic

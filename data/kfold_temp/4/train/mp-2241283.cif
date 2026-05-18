@@ -1,0 +1,43 @@
+# generated using pymatgen
+data_MgTe3WO12
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.57015678
+_cell_length_b   11.11140646
+_cell_length_c   9.77861052
+_cell_angle_alpha   27.95675595
+_cell_angle_beta   51.97648757
+_cell_angle_gamma   57.23101926
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgTe3WO12
+_chemical_formula_sum   'Mg1 Te3 W1 O12'
+_cell_volume   223.50425443
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.69294200  0.49857300  0.70851000  1
+  Te  Te1  1  0.50927100  0.99328800  0.48937300  1
+  Te  Te2  1  0.48176900  0.50549600  0.48768600  1
+  Te  Te3  1  0.97077000  0.50350400  0.00147500  1
+  W  W4  1  0.01686000  0.00429200  0.97069100  1
+  O  O5  1  0.39121200  0.30251400  0.12525500  1
+  O  O6  1  0.24447100  0.10065000  0.64502900  1
+  O  O7  1  0.10992100  0.31543400  0.74588000  1
+  O  O8  1  0.84822100  0.18357700  0.25560900  1
+  O  O9  1  0.34798500  0.82508700  0.12309700  1
+  O  O10  1  0.73180800  0.39664000  0.35887600  1
+  O  O11  1  0.28248100  0.59090600  0.64729000  1
+  O  O12  1  0.66501800  0.20856200  0.84372200  1
+  O  O13  1  0.14572200  0.81883200  0.73224000  1
+  O  O14  1  0.84838500  0.69698400  0.26602400  1
+  O  O15  1  0.75551400  0.86758500  0.37535000  1
+  O  O16  1  0.61534900  0.69432400  0.86195500  1

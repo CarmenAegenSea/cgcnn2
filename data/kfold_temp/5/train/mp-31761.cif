@@ -1,0 +1,38 @@
+# generated using pymatgen
+data_NbFeO4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   3.86421286
+_cell_length_b   6.58670730
+_cell_length_c   6.71179453
+_cell_angle_alpha   106.69014916
+_cell_angle_beta   89.99999193
+_cell_angle_gamma   107.05033514
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   NbFeO4
+_chemical_formula_sum   'Nb2 Fe2 O8'
+_cell_volume   155.77976991
+_cell_formula_units_Z   2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Nb  Nb0  1  0.10228942  0.20842592  0.22971412  1
+  Nb  Nb1  1  0.89375047  0.79155709  0.77030033  1
+  Fe  Fe2  1  0.19529196  0.39441647  0.81192708  1
+  Fe  Fe3  1  0.80104209  0.60560401  0.18816556  1
+  O  O4  1  0.25390498  0.51165827  0.14602388  1
+  O  O5  1  0.74226595  0.48835378  0.85395416  1
+  O  O6  1  0.36226976  0.72857550  0.79831102  1
+  O  O7  1  0.63379441  0.27141982  0.20161558  1
+  O  O8  1  0.05214357  0.10920402  0.86566536  1
+  O  O9  1  0.94284594  0.89078490  0.13432357  1
+  O  O10  1  0.13653135  0.27547478  0.51457517  1
+  O  O11  1  0.86090911  0.72452344  0.48542517  1

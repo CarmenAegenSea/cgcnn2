@@ -1,0 +1,45 @@
+# generated using pymatgen
+data_Cs2MgTi2Cu2(OF5)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   7.53051819
+_cell_length_b   7.66798419
+_cell_length_c   7.52541165
+_cell_angle_alpha   63.42832812
+_cell_angle_beta   59.47632351
+_cell_angle_gamma   63.42586341
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Cs2MgTi2Cu2(OF5)2
+_chemical_formula_sum   'Cs2 Mg1 Ti2 Cu2 O2 F10'
+_cell_volume   320.82757163
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Cs  Cs0  1  0.42502539  0.31009983  0.42567179  1
+  Cs  Cs1  1  0.60125530  0.64648165  0.60170850  1
+  Mg  Mg2  1  0.10987507  0.35295818  0.10997240  1
+  Ti  Ti3  1  0.50878935  0.98429304  0.02284452  1
+  Ti  Ti4  1  0.02246390  0.98460071  0.50916524  1
+  Cu  Cu5  1  0.02632227  0.92685853  0.02695281  1
+  Cu  Cu6  1  0.84908555  0.68078919  0.84949222  1
+  O  O7  1  0.25633718  0.07181221  0.25685753  1
+  O  O8  1  0.74922846  0.95963106  0.74971513  1
+  F  F9  1  0.10213496  0.03194713  0.68745209  1
+  F  F10  1  0.11518749  0.59444098  0.11526145  1
+  F  F11  1  0.19509941  0.70958684  0.56471541  1
+  F  F12  1  0.68644551  0.03122712  0.10358506  1
+  F  F13  1  0.40755134  0.28494216  0.87363920  1
+  F  F14  1  0.56373685  0.70924288  0.19564370  1
+  F  F15  1  0.87328421  0.28516091  0.40768400  1
+  F  F16  1  0.34348257  0.93446067  0.92927249  1
+  F  F17  1  0.92912225  0.93440673  0.34384140  1
+  F  F18  1  0.94985892  0.39741719  0.94973906  1

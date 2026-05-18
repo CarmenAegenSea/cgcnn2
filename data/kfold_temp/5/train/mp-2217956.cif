@@ -1,0 +1,37 @@
+# generated using pymatgen
+data_La2MgZnCoO6
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.80126089
+_cell_length_b   6.03093135
+_cell_length_c   5.89345163
+_cell_angle_alpha   74.59664289
+_cell_angle_beta   56.15376916
+_cell_angle_gamma   59.05440482
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   La2MgZnCoO6
+_chemical_formula_sum   'La2 Mg1 Zn1 Co1 O6'
+_cell_volume   146.81236277
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  La  La0  1  0.77605141  0.82858455  0.60584524  1
+  La  La1  1  0.26842697  0.17575796  0.32183896  1
+  Mg  Mg2  1  0.68018511  0.54373165  0.17076501  1
+  Zn  Zn3  1  0.34382123  0.46342850  0.78343672  1
+  Co  Co4  1  0.02678572  0.00906643  0.95735154  1
+  O  O5  1  0.36113581  0.84497145  0.08651293  1
+  O  O6  1  0.68003255  0.20473525  0.31130544  1
+  O  O7  1  0.03940615  0.40796999  0.76066628  1
+  O  O8  1  0.68942505  0.16116499  0.82686837  1
+  O  O9  1  0.99084718  0.58901731  0.19103216  1
+  O  O10  1  0.35816883  0.78942893  0.60342537  1

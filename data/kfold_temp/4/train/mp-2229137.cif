@@ -1,0 +1,43 @@
+# generated using pymatgen
+data_MgCrTe(WO6)2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   5.37307290
+_cell_length_b   10.76975130
+_cell_length_c   9.42727557
+_cell_angle_alpha   28.72106627
+_cell_angle_beta   52.62143341
+_cell_angle_gamma   57.93967895
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   MgCrTe(WO6)2
+_chemical_formula_sum   'Mg1 Cr1 Te1 W2 O12'
+_cell_volume   208.31341334
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Mg  Mg0  1  0.18673400  0.49264800  0.25105300  1
+  Cr  Cr1  1  0.98149700  0.00445900  0.98982000  1
+  Te  Te2  1  0.99371600  0.49747000  0.99978000  1
+  W  W3  1  0.51105900  0.00337200  0.48154100  1
+  W  W4  1  0.46625600  0.50957200  0.49837100  1
+  O  O5  1  0.35731400  0.31438900  0.13197900  1
+  O  O6  1  0.26007700  0.11154200  0.62454800  1
+  O  O7  1  0.17970300  0.28216500  0.74776700  1
+  O  O8  1  0.86905600  0.18907400  0.25129100  1
+  O  O9  1  0.32979700  0.78409100  0.16413500  1
+  O  O10  1  0.79024300  0.39766000  0.34449600  1
+  O  O11  1  0.22438100  0.61691000  0.63925900  1
+  O  O12  1  0.67275900  0.21529500  0.82327400  1
+  O  O13  1  0.14599300  0.78946600  0.76829800  1
+  O  O14  1  0.84623400  0.69925700  0.24778700  1
+  O  O15  1  0.73950500  0.91446800  0.33666900  1
+  O  O16  1  0.61587700  0.67816400  0.88799200  1
