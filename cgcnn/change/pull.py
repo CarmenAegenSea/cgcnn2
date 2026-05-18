@@ -16,8 +16,8 @@ from pymatgen.io.cif import CifWriter
 # 配置参数
 API_KEY = "rdq9JwSE1rePyRtCKlqS6ZQgGWcYoz9U"
 OUTPUT_DIR = "data/catalysis"                   # 输出目录
-MAX_MATERIALS = 20000                           # 每个通道最大材料数，最终总数可能略多于此值
-REQUEST_DELAY = 0.1
+MAX_MATERIALS = 20000                           # 每个通道最大材料数
+REQUEST_DELAY = 0.1                             # 请求间隔时间s
 
 MAX_ENERGY_ABOVE_HULL = 0.2                     # 排除极不稳定结构
 
